@@ -1,0 +1,102 @@
+.swkSection{
+  .container{
+    .seeAll{
+      color: $blue;
+      display: none;
+      @include mobile{
+        display: block;
+        text-align: end;
+        margin-top: 10px;
+      }
+      a{
+        color: $blue;
+        text-decoration: none;
+      }
+    }
+  }
+    background: #F3F3F2;
+    padding-top: 50px;
+    padding-bottom:100px;
+    @include mobile{
+      padding-bottom: 25px;
+    }
+    transition: 1s;
+    .bolumlerHeader{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .name{
+        font-size: 26px;
+        font-weight: bold;
+      }
+      .seeAll{
+        display: block;
+        @include mobile{
+          display: none;
+        }
+        a{
+          text-decoration: none;
+          color:$blue;
+          font-weight: 400;
+        }
+    }
+    }
+    .karhanalar{
+      display: flex;
+      // justify-content: space-between;
+      flex-wrap: wrap;
+      a{
+        text-decoration: none;
+        width: 32%;
+        margin-right: 2%;
+        color: $black;
+        
+        @include mobile{
+          width: 100%;
+          margin-right: 0;
+          &:not(.four){
+            display: none;
+          }
+        }
+      }
+
+      .karhana{
+          background: white;
+          margin-top: 30px;
+          width:100%;
+          border-radius: 10px;
+          padding: 15px;
+          box-sizing: border-box;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+         
+          .logoContainer{
+            background: rgba(13, 51, 136, 0.08);
+            padding: 15px;
+            border-radius: 30px;
+            box-sizing: border-box;
+            min-width: 56px;
+            max-width: 56px;
+            min-height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                width: 100%;
+            }
+          }
+          .right{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 15px;
+            .karhanaName{
+                width: 70%;
+                font-weight: 600;
+            }
+          }
+      }
+    }
+  }

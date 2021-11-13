@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include ('../src/header.ejs') %>
+
+    <section class="NavbarSection">
+        <div class="container">
+            <div class="header">Press-center</div>
+            <div class="lineTop">
+                <div class="active" data-id0 data-content id="news"><span></span> News</div>
+                <div data-id1 data-content id="events"><span></span> Events announcements</div>
+                <a href="/gazet?page=pressCenter"><div data-id2 data-content id="gazet"><span></span> About us</div></a>
+            </div>
+            <div class="teg">
+                <div class="title">Tegi:</div>
+                <% var len = list.tegs.length>4 ? 5 : list.tegs.length %> 
+                <% var show = list.tegs.length>5 ? true : false %> 
+                <% for( let i = 0; i < len ;i++ ) { %>
+                    <div><a href="" data-dynamic data-tm="<%= list.tegs[i].name.TM %>" data-en="<%= list.tegs[i].name.EN %>" data-ru="<%= list.tegs[i].name.RU %>"><%= list.tegs[i].name.RU %> </a></div>
+                <% } %>    
+                <% if (show) { %>
+                    <div class="dots three_dots">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                <% } %>
+            </div>
+            <div class="teg2" style="display: none;">
+                <div class="teg">
+                    <% for( let i = len; i < list.tegs.length ; i++ ) { %>
+                    <div> <a href="" data-dynamic data-tm="<%= list.tegs[i].name.TM %>" data-en="<%= list.tegs[i].name.EN %>" data-ru="<%= list.tegs[i].name.RU %>"><%= list.tegs[i].name.RU %> </a></div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="newsSection">
+        <div class="container">
+            <div class="header">Today</div>
+            <div class="fullHide">
+                <div class="fullLeft0">
+                    <div class="fullLeft newsSectionContainer">
+                        <div class="left"><img src='/pictures/news/<%=list.list[0].pic%>' alt=""></div>
+                        <!-- <div class="left"><img src="<%=host%>/news/<%= list.list[0].pic %>" alt=""></div> -->
+                        <div class="right">
+                        <div class="top">
+                            <div class="name" data-dynamic data-tm="<%= list.list[0].name.TM %>" data-en="<%= list.list[0].name.EN %>" data-ru="<%= list.list[0].name.RU %>"><%= list.list[0].name.RU %> </div>
+                            <div class="title" data-dynamic data-tm="<%= list.list[0].title.TM %>" data-en="<%= list.list[0].title.EN %>" data-ru="<%= list.list[0].title.RU %>"><%= list.list[0].title.RU %> </div>
+                        </div>
+                        <div class="bottom">
+                            <div class="new" data-content id="news">News</div>
+                            <div class="dot"></div>
+                            <div class="date" data-dynamic data-tm="<%= list.list[0].date.TM %>" data-en="<%= list.list[0].date.EN %>" data-ru="<%= list.list[0].date.RU %>"><%= list.list[0].date.RU %> </div>
+                        </div>
+                        </div>
+                        
+                        <% for (let i = 1; i < 3; i++) {%>
+                        <div class="newsContainer lowNews<%=i%>">
+                            <div class="top"><img src="/pictures/news/<%= list.list[i].pic %>" alt=""></div>
+                            <!-- <div class="top"><img src="<%=host%>/news/<%= list.list[i].pic %>" alt=""></div> -->
+                            <div class="bottomTop">
+                                <div class="name" data-dynamic data-tm="<%= list.list[i].name.TM %>" data-en="<%= list.list[i].name.EN %>" data-ru="<%= list.list[i].name.RU %>"><%= list.list[i].name.RU %> </div>
+                            </div>
+                            <div class="bottom">
+                                <div class="new" data-content id="news">News</div>
+                                <div class="dot"></div>
+                                <div class="date" data-dynamic data-tm="<%= list.list[i].date.TM %>" data-en="<%= list.list[i].date.EN %>" data-ru="<%= list.list[i].date.RU %>"><%= list.list[i].date.RU %> </div>
+                            </div>
+                        </div>
+                        <%}%> 
+                    </div>
+    
+                    <%if(list.list.length>7){%>
+                        <div class="extraNews">
+                    <%}else{%>
+                        <div class="extraNews" style="justify-content: flex-start;">  
+                    <%}%>
+                    <% var len = list.list.length>9 ? 9 : list.list.length %> 
+                    <%for(var i = 3; i<len; i++){%>
+                        <%if(i==len-1){%>
+                            <div class="extraNewsContainer last">
+                        <%}else{%>
+                            <div class="extraNewsContainer" >      
+                        <%}%>
+                                <div class="top"><img src="/pictures/news/<%= list.list[i].pic %>" alt=""></div>
+                                <div class="bottomTop">
+                                    <div class="name" data-dynamic data-tm="<%= list.list[i].name.TM %>" data-en="<%= list.list[i].name.EN %>" data-ru="<%= list.list[i].name.RU %>"><%= list.list[i].name.RU %></div>
+                                </div>
+                            <%if(i==len-1){%>
+                                <div class="bottom bottomLast">
+                            <%}else{%>
+                                <div class="bottom">
+                            <%}%>
+                                    <div class="new" data-content id="news">News</div>
+                                    <div class="dot"></div>
+                                    <div class="date" data-dynamic data-tm="<%= list.list[i].date.TM %>" data-en="<%= list.list[i].date.EN %>" data-ru="<%= list.list[i].date.RU %>"><%= list.list[i].date.RU %> </div>
+                                </div>
+                            </div>
+                        <%}%>
+                        </div>
+                    </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <div class="fullHide"  style="display: none;">
+                <div class="fullLeft0">
+                    <div class="fullLeft newsSectionContainer">
+                        <div class="left"><img src='/pictures/news/<%=list.list[1].pic%>' alt=""></div>
+                        <!-- <div class="left"><img src="<%=host%>/news/<%= list.list[0].pic %>" alt=""></div> -->
+                        <div class="right">
+                        <div class="top">
+                            <div class="name" data-dynamic data-tm="<%= list.list[0].name.TM %>" data-en="<%= list.list[0].name.EN %>" data-ru="<%= list.list[0].name.RU %>"><%= list.list[0].name.RU %> </div>
+                            <div class="title" data-dynamic data-tm="<%= list.list[0].title.TM %>" data-en="<%= list.list[0].title.EN %>" data-ru="<%= list.list[0].title.RU %>"><%= list.list[0].title.RU %> </div>
+                        </div>
+                        <div class="bottom">
+                            <div class="new" data-content id="news">News</div>
+                            <div class="dot"></div>
+                            <div class="date" data-dynamic data-tm="<%= list.list[0].date.TM %>" data-en="<%= list.list[0].date.EN %>" data-ru="<%= list.list[0].date.RU %>"><%= list.list[0].date.RU %> </div>
+                        </div>
+                        </div>
+                        
+                        <% for (let i = 1; i < 3; i++) {%>
+                        <div class="newsContainer lowNews<%=i%>">
+                            <div class="top"><img src="/pictures/news/<%= list.list[i].pic %>" alt=""></div>
+                            <!-- <div class="top"><img src="<%=host%>/news/<%= list.list[i].pic %>" alt=""></div> -->
+                            <div class="bottomTop">
+                                <div class="name" data-dynamic data-tm="<%= list.list[i].name.TM %>" data-en="<%= list.list[i].name.EN %>" data-ru="<%= list.list[i].name.RU %>"><%= list.list[i].name.RU %> </div>
+                            </div>
+                            <div class="bottom">
+                                <div class="new" data-content id="news">News</div>
+                                <div class="dot"></div>
+                                <div class="date" data-dynamic data-tm="<%= list.list[i].date.TM %>" data-en="<%= list.list[i].date.EN %>" data-ru="<%= list.list[i].date.RU %>"><%= list.list[i].date.RU %> </div>
+                            </div>
+                        </div>
+                        <%}%> 
+                </div>
+    
+                    <%if(list.list.length>7){%>
+                        <div class="extraNews">
+                    <%}else{%>
+                        <div class="extraNews" style="justify-content: flex-start;">  
+                    <%}%>
+                    <% var len = list.list.length>9 ? 9 : list.list.length %> 
+                    <%for(var i = 3; i<len; i++){%>
+                        <%if(i==len-1){%>
+                            <div class="extraNewsContainer last">
+                        <%}else{%>
+                            <div class="extraNewsContainer" >      
+                        <%}%>
+                                <div class="top"><img src="/pictures/news/<%= list.list[i].pic %>" alt=""></div>
+                                <div class="bottomTop">
+                                    <div class="name" data-dynamic data-tm="<%= list.list[i].name.TM %>" data-en="<%= list.list[i].name.EN %>" data-ru="<%= list.list[i].name.RU %>"><%= list.list[i].name.RU %></div>
+                                </div>
+                            <%if(i==len-1){%>
+                                <div class="bottom bottomLast">
+                            <%}else{%>
+                                <div class="bottom">
+                            <%}%>
+                                    <div class="new" data-content id="news">News</div>
+                                    <div class="dot"></div>
+                                    <div class="date" data-dynamic data-tm="<%= list.list[i].date.TM %>" data-en="<%= list.list[i].date.EN %>" data-ru="<%= list.list[i].date.RU %>"><%= list.list[i].date.RU %> </div>
+                                </div>
+                            </div>
+                        <%}%>
+                        </div>
+                    </div>
+            </div>
+            <hr id="newsSection">
+              <div class="splide">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <%for(var i = 0; i < list.ads.length; i++){%>
+                      <li class="splide__slide"><div><img src="/pictures/reklams/<%=list.ads[i]%>" alt=""></div></li>
+                    <%}%>
+                  </ul>
+                </div>
+              </div>
+          </div>
+        </section>
+
+
+
+        <section class="allNewsSection">
+            <div class="container">
+                <div class="lowNewsContainer">     
+                </div>
+                <div class="splideSplide">
+                    <div class="splide2">
+                        <div class="splide__track">
+                          <ul class="splide__list">
+                            <%for(var i = 0; i < list.ads2.length; i++){%>
+                              <li class="splide__slide"><div><img src="/pictures/reklams/<%=list.ads2[i]%>" alt=""></div></li>
+                            <%}%>
+                          </ul>
+                        </div>
+                      </div>
+                </div>
+                <div class="lowNewsContainer">
+                    
+                </div>
+                <div class="splideSplide">
+                    <div class="splide3">
+                        <div class="splide__track">
+                          <ul class="splide__list">
+                            <%for(var i = 0; i < list.ads2.length; i++){%>
+                              <li class="splide__slide"><div><img src="/pictures/reklams/<%=list.ads2[i]%>" alt=""></div></li>
+                            <%}%>
+                          </ul>
+                        </div>
+                      </div>
+                </div>
+                <div class="lowNewsContainer">
+                    
+                </div>
+                <div class="downloadBtn">Download more</div>
+            </div>
+        </section>
+        
+
+        <%- include ('../src/bottom.ejs') %>
+
+<!-- Tegler -->
+    <script>
+        const tegs = document.querySelector(".three_dots");
+        tegs.addEventListener("click",function(){
+            const teg2 = document.querySelector(".teg2");
+            teg2.style.display = "block"
+            this.style.display = "none";
+        })
+    </script> 
+
+
+<!-- load more -->
+<script>
+   
+   function splideHide(a,b,id){
+        b[id].style.height = "0";
+        b[id].style.marginTop = "0px";
+        b[id].style.marginBottom = "0px";
+        a.style.left = "100%";
+        var c = document.querySelector(".downloadBtn");
+        c.style.display = "block";
+   }
+    const lowNews = document.querySelectorAll(".lowNewsContainer");
+
+    const load = document.querySelector(".downloadBtn");
+
+    var limit = 9;
+    var page = 1;
+    var tab = 1;
+
+    var right1 = document.querySelectorAll(".lineTop div");
+    var full = document.querySelectorAll(".fullHide");
+
+    var sl = "<%=sl%>"
+    
+    if(sl == 2){
+        tab = 2;
+        full[1].style.display = "block";
+        full[0].style.display = "none";
+        tab = 2;
+        right1[1].classList.add("active")
+        right1[0].classList.remove("active");
+    }
+
+    for(var i = 0; i<right1.length; i++){
+      right1[i].addEventListener("click",function(){
+          if(page == 2){
+              var splidd = document.querySelector(".splide2");
+              var spliddS = document.querySelectorAll(".splideSplide");
+              splideHide(splidd,spliddS,0);
+          }else if(page >= 3){
+              var splidd = document.querySelector(".splide2");
+              var spliddS = document.querySelectorAll(".splideSplide");
+              splideHide(splidd,spliddS,0);
+              
+              var splidd = document.querySelector(".splide3");
+              splideHide(splidd,spliddS,1);
+          }
+        page = 1;
+        for(var j = 0; j<right1.length; j++){
+          right1[j].classList.remove("active");
+        }
+        this.classList.add("active");
+
+        
+        
+
+
+        
+        if(this.hasAttribute('data-id0')){
+            tab = 1;
+            full[0].style.display = "block";
+            full[1].style.display = "none";
+        }else if(this.hasAttribute("data-id1")){
+            tab = 2;
+            full[1].style.display = "block";
+            full[0].style.display = "none";
+        }else{
+            tab = 1;
+        }
+        for(var i = 0; i<lowNews.length; i++){
+            lowNews[i].innerHTML = "";
+        }
+        setNews(1,9,tab);
+      })
+    }
+
+    async function takeData(times,limit,tab){
+        var data = await fetch(`/pressCenterNews?page=${times}&limit=${limit}&tab=${tab}`);
+        data = await data.json();
+        return data;
+    }
+    
+    async function setNews(times,limit,tab){
+        var data = await takeData(times,limit,tab)
+        if(times == 1){
+            
+            for(var i = 0; i<data.length; i++){
+                if(data[i] == null){
+                    load.style.display = 'none';
+                    break
+                }
+                if((i+1)%3==0){
+                    var a = `
+                        <div class="lowNews lineLast" id="more">`
+                }else{
+                    var a = `
+                        <div class="lowNews" id="more">`
+                }
+                a +=     
+                        `<div class="surat"><img src="/pictures/news/${data[i].pic}" alt=""></div>
+                            <div class="name" data-dynamic data-tm="${data[i].name.TM}" data-ru="${data[i].name.RU}" data-en="${data[i].name.EN}">${data[i].name.RU}</div>
+                            <div class="bottom">
+                                <div class="news" data-content id="news">News</div>
+                                <div class="dot"></div>
+                                <div class="date" data-dynamic data-tm="${data[i].date.TM}" data-ru="${data[i].date.RU}" data-en="${data[i].date.EN}">${data[i].date.RU}</div>
+                            </div>
+                        </div>`
+                lowNews[0].innerHTML += a;
+            }
+        
+            changeLanguage();   
+        }else if(times == 2){
+            var splidd = document.querySelector(".splide2");
+            var spliddS = document.querySelector(".splideSplide");
+            spliddS.style.height = "auto";
+            spliddS.style.marginTop = "50px";
+            spliddS.style.marginBottom = "50px";
+            splidd.style.left = "0";
+            for(var i = 0; i<data.length; i++){
+                if(data[i] == null){
+                    load.style.display = 'none';
+                    break
+                }
+                if((i+1)%3==0){
+                    var a = `
+                        <div class="lowNews lineLast"  id="more">`
+                }else{
+                    var a = `
+                        <div class="lowNews" id="more">`
+                }
+                a +=     
+                        `<div class="surat"><img src="/pictures/news/${data[i].pic}" alt=""></div>
+                            <div class="name" data-dynamic data-tm="${data[i].name.TM}" data-ru="${data[i].name.RU}" data-en="${data[i].name.EN}">${data[i].name.RU}</div>
+                            <div class="bottom">
+                                <div class="news" data-content id="news">News</div>
+                                <div class="dot"></div>
+                                <div class="date" data-dynamic data-tm="${data[i].date.TM}" data-ru="${data[i].date.RU}" data-en="${data[i].date.EN}">${data[i].date.RU}</div>
+                            </div>
+                        </div>`
+                lowNews[1].innerHTML += a;
+            }
+            
+            changeLanguage();   
+        }else if(times ==3){
+            var splidd2 = document.querySelector(".splide3");
+            var spliddS2 = document.querySelectorAll(".splideSplide");
+            spliddS2[1].style.height = "auto";
+            spliddS2[1].style.marginTop = "50px";
+            spliddS2[1].style.marginBottom = "50px";
+            splidd2.style.left = "0";
+            for(var i = 0; i<data.length; i++){
+                if(data[i] == null){
+                    load.style.display = 'none';
+                    break
+                }
+                if((i+1)%3==0){
+                    var a = `
+                        <div class="lowNews lineLast" id="more">`
+                }else{
+                    var a = `
+                        <div class="lowNews" id="more">`
+                }
+                a +=     
+                        `<div class="surat"><img src="/pictures/news/${data[i].pic}" alt=""></div>
+                            <div class="name" data-dynamic data-tm="${data[i].name.TM}" data-ru="${data[i].name.RU}" data-en="${data[i].name.EN}">${data[i].name.RU}</div>
+                            <div class="bottom">
+                                <div class="news" data-content id="news">News</div>
+                                <div class="dot"></div>
+                                <div class="date" data-dynamic data-tm="${data[i].date.TM}" data-ru="${data[i].date.RU}" data-en="${data[i].date.EN}">${data[i].date.RU}</div>
+                            </div>
+                        </div>`
+                lowNews[2].innerHTML += a;
+            }
+        
+            changeLanguage();  
+        }else{
+            for(var i = 0; i<data.length; i++){
+                if(data[i] == null){
+                    load.style.display = 'none';
+                    break
+                }
+                if((i+1)%3==0){
+                    var a = `
+                        <div class="lowNews lineLast" id="more">`
+                }else{
+                    var a = `
+                        <div class="lowNews" id="more">`
+                }
+                a +=     
+                        `<div class="surat"><img src="/pictures/news/${data[i].pic}" alt=""></div>
+                            <div class="name" data-dynamic data-tm="${data[i].name.TM}" data-ru="${data[i].name.RU}" data-en="${data[i].name.EN}">${data[i].name.RU}</div>
+                            <div class="bottom">
+                                <div class="news" data-content id="news">News</div>
+                                <div class="dot"></div>
+                                <div class="date" data-dynamic data-tm="${data[i].date.TM}" data-ru="${data[i].date.RU}" data-en="${data[i].date.EN}">${data[i].date.RU}</div>
+                            </div>
+                        </div>`
+                lowNews[2].innerHTML += a;
+            }
+        
+            changeLanguage();  
+        }
+    }
+
+    setNews(1,limit,tab);
+    var splide2 = document.querySelectorAll(".slideshow-container");
+    
+    load.addEventListener("click",function(){
+        page+=1;
+        setNews(page,limit,tab);
+    })
+</script>
+
+
+<!-- splide -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        new Splide(".splide",{
+            type:"loop",
+            perPage:1,
+            autoplay:true,
+            cover:true
+        }).mount();
+        new Splide(".splide2",{
+            type:"loop",
+            perPage:1,
+            autoplay:true,
+            cover:true
+        }).mount();
+        new Splide(".splide3",{
+            type:"loop",
+            perPage:1,
+            autoplay:true,
+            cover:true
+        }).mount();
+    });
+</script>
+
+
+
+</body>
+</html>

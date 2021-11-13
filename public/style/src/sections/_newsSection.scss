@@ -1,0 +1,260 @@
+@import '../color';
+
+
+.newsSection{
+    .newsSectionContainer{
+        .splideHide{
+            display: none;
+        }
+        .newsSplide, .newsSplide2, .newsSplide3{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: 
+            "navbar navbar navbar"
+            "left left right"
+            "lowNews1 lowNews2 lowNews3"
+            "splide splide splide";
+            grid-gap:30px;
+            @include tablet{
+                grid-template-areas: 
+                "navbar navbar navbar"
+                "left left left"
+                "right right right"
+                "lowNews1 lowNews2 lowNews3"
+                "splide splide splide";
+            }
+            @include mobile{
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-areas: 
+                "navbar navbar navbar"
+                "left left left"
+                "right right right"
+                "lowNews1 lowNews1 lowNews1"
+                "lowNews2 lowNews2 lowNews2" 
+                "lowNews3 lowNews3 lowNews3"
+                "splide splide splide";
+            }
+        }
+        .navbar{
+            grid-area: navbar;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: 
+            "left1 left1 right1";
+            grid-gap: 30px;
+            border-bottom:2px solid rgba(153,153,153,0.3);
+            @include tablet{
+                border-bottom: none;
+            }
+            .left1{
+                grid-area: left1;
+                @include center(flex-start, center);
+                
+                a{
+                    text-decoration: none;
+                    color: $black;
+                    @include center();
+                }
+                .h1{     
+                    font-size: 26px;
+                    font-weight: bold;
+                }
+                .img{
+                    height: 25px;
+                    width: 10px;
+                    margin-left: 10px;
+                    @include center(center,flex-end);
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .right1{
+                @include center(space-between, center);
+                @include tablet{
+                    display: none;
+                }
+                grid-area: right1;
+                color: $gray;
+                a{
+                    text-decoration: none;
+                    color: $gray;
+                }
+                div{
+                    padding:5px;
+                    text-align: center;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    span{
+                        width: 0;
+                        height: 50px;
+                        border-bottom: 2px solid $blue;
+                        position: absolute;
+                        left: 0;
+                        transition: 0.5s;
+                    }
+                    &:hover span{
+                        width: 100%;
+                    }
+                }
+                .active1{
+                    display: flex;
+                    align-items: center;
+                    height: 38px;
+                    color: black;
+                    border-bottom: 2px solid $blue;
+                    margin-bottom: -2px;
+                }
+                
+            }
+        }
+
+
+        .left{
+            grid-area: left;
+            img{
+                width: 100%;
+            }
+        }
+        .right{
+            grid-area: right;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .name{
+                font-size: 24px;
+                font-weight: 600;
+            }
+            .title{
+                color: $gray;
+                margin-top: 20px;
+            }
+            .bottom{
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+                .new{
+                    color: $blue;
+                    margin-right: 10px;
+                    font-weight: 600;
+                }
+                .dot{
+                    background: $gray;
+                    margin-top: 3px;
+                    width: 7px;
+                    height: 7px;
+                    border-radius: 50px;
+                }
+                .date{
+                    margin-left: 10px;
+                    color: $gray;
+                }
+            }
+        }
+        .lowNews1{
+            grid-area: lowNews1;
+        }
+        .lowNews2{
+            grid-area: lowNews2;
+        }
+        .lowNews3{
+            grid-area: lowNews3;
+        }
+        .newsContainer{
+            @include mobile{
+                border-bottom: 1px solid rgba(153, 153, 153, 0.3);
+            }
+            
+        }
+        .lowNews1,.lowNews2,.lowNews3,.left{
+            border-radius: 5px;
+            @include mobile{
+                border-radius: 0;
+            }
+        }
+        .lowNews1,.lowNews2,.lowNews3{
+            .top{
+                @include mobile{
+                    display: none;
+                }
+            }
+            @include mobile{
+                font-size: 14px;
+            }
+            position: relative;
+            // margin-bottom: 100px;
+            img{
+                width: 100%;
+            }
+            .bottomTop{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-top: 20px;
+                .name{
+                    font-weight: 600;
+                    margin-bottom: 30px;
+                    color: $black;
+                }
+            }
+            .bottom{
+                display: flex;
+                align-items: center;
+                position: absolute;
+                bottom: 0;
+                @include mobile{
+                    bottom: 5px;
+                }
+                .new{
+                    color: $blue;
+                    margin-right: 10px;
+                    font-weight: 600;
+                }
+                .dot{
+                    background: $gray;
+                    margin-top: 3px;
+                    width: 7px;
+                    height: 7px;
+                    border-radius: 50px;
+                }
+                .date{
+                    margin-left: 10px;
+                    color: $gray;
+                }
+            }
+        }
+        .splide{
+            margin: 100px 0;
+            grid-area: splide;
+            @include mobile{
+                margin:30px 0;
+            }
+            img{
+                width: 100%;
+            }
+            .splide__arrows{
+                @include mobile{
+                    display: none;
+                }
+            }
+            .splide__pagination{
+                @include mobile{
+                    display: none;
+                }
+            }
+        }
+        .splide5{
+            .splide__pagination{
+                display: none;
+            }
+            ul{
+                li{
+                    margin:0 20px;
+                }
+            }
+        }
+    }    
+}

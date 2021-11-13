@@ -1,0 +1,29 @@
+section.consultation{
+    .container{
+        .header{
+            font-size: 26px;
+            font-weight: 700;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            border-bottom: 2px solid rgba(153, 153, 153, 0.3);
+            padding-bottom: 15px;
+        }
+        .name{
+            font-size: 24px;
+            font-weight: 600;
+            color: $black;
+            margin-bottom: 50px;
+        }
+        .img{
+            width: 80%;
+            margin:auto;
+            margin-bottom: 30px;
+            img{
+                width: 100%;
+            }
+        }
+        .text{
+            margin-bottom: 50px;
+        }
+    }
+}

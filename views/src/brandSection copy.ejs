@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section class="brandSection">
+        <div class="container">
+          <div class="splide2">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <%for(var i = 0; i < list.banner[1].banner.length; i++){%>
+                  <li class="splide__slide"><a href="<%=list.banner[1].banner[i].link%>"><div><img src="<%=host%>/banners/<%=list.banner[1].banner[i].pic%>" alt=""></div></a></li>
+                <%}%>
+              </ul>
+            </div>
+          </div>
+          <div class="brandHeader">
+            <div class="header" id="brandHeader">Karhanalar - Sppt agzalary</div>
+            <div class="seeAll" ><a href="/agzalar/-1" data-content id="seeAll"> Hemmesini gormek</a></div>
+          </div>
+          <div class="brands">
+            <%for (var i = 1; i<loop+1; i++){%>
+              <%if(i%3==0){%>
+                <a href="/agzalar/<%=list.brands[i-1].id%>/" class="margin">
+                  <div class="brand">
+                    <div class="left">
+                      <div class="brandLogo"><img src="<%= host %>/members/<%= list.brands[i-1].name %>/logo/<%=list.brands[i-1].pic%>" alt=""></div>
+                      <div class="brandName"><%=list.brands[i-1].name%></div>
+                    </div>
+                    <div class="arrow"><img src="/pictures/icon/topRight.png" alt=""></div>
+                  </div>
+                </a>
+              <%}else{%>
+                <a href="/agzalar/<%= list.brands[i-1].id %>">
+                  <div class="brand">
+                    <div class="left">
+                      <div class="brandLogo"><img src="<%= host %>/members/<%= list.brands[i-1].name %>/logo/<%=list.brands[i-1].pic%>" at=""></div>
+                      <div class="brandName"><%=list.brands[i-1].name%></div>
+                    </div>
+                    <div class="arrow"><img src="/pictures/icon/topRight.png" alt=""></div>
+                  </div>
+                </a>
+              <%}%>
+            <%}%>
+          </div>
+          <div class="seeAll" ><a href="/agzalar/-1" data-content id="seeAll"> Hemmesini gormek</a></div>
+        </div>
+      </section>
+      
+      <script src="/scripts/src/materialize/splide.js"></script>
+      <!-- splide -->
+      <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              new Splide(".splide2",{
+                  type:"loop",
+                  perPage:1,
+                  autoplay:true,
+                  cover:true
+                }).mount();
+    });
+      </script>
+
+      <script>
+        const brand = document.querySelectorAll(".brands a");
+        if(brand.length>3){
+          for(var i = 0; i<4; i++){
+            brand[i].className+=" four"
+          }
+        }
+      </script>
+</body>
+</html>

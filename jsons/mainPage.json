@@ -1,0 +1,485 @@
+{
+    "list" : [
+      {
+        "pic":"news1.png",
+        "name":{
+          "TM":"Programma üpjünçiligini ösdürmek üçin maliýe goldawy türkmen biznesine berler.",
+          "RU":"Туркменскому бизнесу окажут финансовую поддержку по созданию ПО.",
+          "EN":"Financial support for software development will be provided to Turkmen business."
+        },
+        "title":{
+          "TM":"Milli ykdysadyýetde yzygiderli durmuşa geçirmek arkaly sanly ykdysadyýeti döretmek üçin.",
+          "RU":"В целях формирования цифровой экономики посредством планомерного внедрения в национальную экономику.",
+          "EN":"In order to form a digital economy through systematic implementation in the national economy."
+        },
+        "date": {
+          "TM":"31 awgust 2021",
+          "RU":"31 августа 2021",
+          "EN":"31 august 2021"
+        },
+        "id":1
+      },
+      {
+        "pic":"news2.png",
+        "name":{
+          "TM":"Programma  ösdürmek üçin maliýe goldawy türkmen biznesine berler.",
+          "RU":"Туркменскому бизнесу окажут финансовую поддержку по созданию ПО.",
+          "EN":"Financial support for software development will be provided to Turkmen business."
+        },
+        "title":{
+          "TM":"Milli ykdysadyýetde yzygiderli durmuşa geçirmek arkaly sanly ykdysadyýeti döretmek üçin.",
+          "RU":"В целях формирования цифровой экономики посредством планомерного внедрения в национальную экономику.",
+          "EN":"In order to form a digital economy through systematic implementation in the national economy."
+        },
+        "date": {
+          "TM":"31 awgust 2021",
+          "RU":"31 августа 2021",
+          "EN":"31 august 2021"
+        },
+        "id":2
+      },
+      {
+        "pic":"news3.png",
+        "name":{
+          "TM":"Programma üpjünçiligini ösdürmek üçin maliýe goldawy türkmen biznesine berler.",
+          "RU":"Туркменскому бизнесу окажут финансовую поддержку по созданию ПО.",
+          "EN":"Financial support for software development will be provided to Turkmen business."
+        },
+        "title":{
+          "TM":"Milli ykdysadyýetde yzygiderli durmuşa geçirmek arkaly sanly ykdysadyýeti döretmek üçin.",
+          "RU":"В целях формирования цифровой экономики посредством планомерного внедрения в национальную экономику.",
+          "EN":"In order to form a digital economy through systematic implementation in the national economy."
+        },
+        "date": {
+          "TM":"31 awgust 2021",
+          "RU":"31 августа 2021",
+          "EN":"31 august 2021"
+        },
+        "id":3
+      },
+      {
+        "pic":"news4.png",
+        "name":{
+          "TM":"Programma üpjünçiligini ösdürmek üçin maliýe goldawy türkmen biznesine berler.",
+          "RU":"Туркменскому бизнесу окажут финансовую поддержку по созданию ПО.",
+          "EN":"Financial support for software development will be provided to Turkmen business."
+        },
+        "title":{
+          "TM":"Milli ykdysadyýetde yzygiderli durmuşa geçirmek arkaly sanly ykdysadyýeti döretmek üçin.",
+          "RU":"В целях формирования цифровой экономики посредством планомерного внедрения в национальную экономику.",
+          "EN":"In order to form a digital economy through systematic implementation in the national economy."
+        },
+        "date": {
+          "TM":"31 awgust 2021",
+          "RU":"31 августа 2021",
+          "EN":"31 august 2021"
+        },
+        "id":4
+      }
+    ],
+    "list2" : [
+      {
+        "pic":"news1.png",
+        "name":{
+          "TM":"Chareler üpjünçiligini ösdürmek üçin maliýe goldawy türkmen biznesine berler.",
+          "RU":"Туркменскому бизнесу окажут финансовую поддержку по созданию ПО.",
+          "EN":"Financial support for software development will be provided to Turkmen business."
+        },
+        "title":{
+          "TM":"Milli ykdysadyýetde yzygiderli durmuşa geçirmek arkaly sanly ykdysadyýeti döretmek üçin.",
+          "RU":"В целях формирования цифровой экономики посредством планомерного внедрения в национальную экономику.",
+          "EN":"In order to form a digital economy through systematic implementation in the national economy."
+        },
+        "date": {
+          "TM":"31 awgust 2021",
+          "RU":"31 августа 2021",
+          "EN":"31 august 2021"
+        },
+        "id":1
+      },
+      {
+        "pic":"news2.png",
+        "name":{
+          "TM":"Programma  ösdürmek üçin maliýe goldawy türkmen biznesine berler.",
+          "RU":"Туркменскому бизнесу окажут финансовую поддержку по созданию ПО.",
+          "EN":"Financial support for software development will be provided to Turkmen business."
+        },
+        "title":{
+          "TM":"Milli ykdysadyýetde yzygiderli durmuşa geçirmek arkaly sanly ykdysadyýeti döretmek üçin.",
+          "RU":"В целях формирования цифровой экономики посредством планомерного внедрения в национальную экономику.",
+          "EN":"In order to form a digital economy through systematic implementation in the national economy."
+        },
+        "date": {
+          "TM":"31 awgust 2021",
+          "RU":"31 августа 2021",
+          "EN":"31 august 2021"
+        },
+        "id":2
+      },
+      {
+        "pic":"news3.png",
+        "name":{
+          "TM":"Programma üpjünçiligini ösdürmek üçin maliýe goldawy türkmen biznesine berler.",
+          "RU":"Туркменскому бизнесу окажут финансовую поддержку по созданию ПО.",
+          "EN":"Financial support for software development will be provided to Turkmen business."
+        },
+        "title":{
+          "TM":"Milli ykdysadyýetde yzygiderli durmuşa geçirmek arkaly sanly ykdysadyýeti döretmek üçin.",
+          "RU":"В целях формирования цифровой экономики посредством планомерного внедрения в национальную экономику.",
+          "EN":"In order to form a digital economy through systematic implementation in the national economy."
+        },
+        "date": {
+          "TM":"31 awgust 2021",
+          "RU":"31 августа 2021",
+          "EN":"31 august 2021"
+        },
+        "id":3
+      },
+      {
+        "pic":"news4.png",
+        "name":{
+          "TM":"Programma üpjünçiligini ösdürmek üçin maliýe goldawy türkmen biznesine berler.",
+          "RU":"Туркменскому бизнесу окажут финансовую поддержку по созданию ПО.",
+          "EN":"Financial support for software development will be provided to Turkmen business."
+        },
+        "title":{
+          "TM":"Milli ykdysadyýetde yzygiderli durmuşa geçirmek arkaly sanly ykdysadyýeti döretmek üçin.",
+          "RU":"В целях формирования цифровой экономики посредством планомерного внедрения в национальную экономику.",
+          "EN":"In order to form a digital economy through systematic implementation in the national economy."
+        },
+        "date": {
+          "TM":"31 awgust 2021",
+          "RU":"31 августа 2021",
+          "EN":"31 august 2021"
+        },
+        "id":4
+      }
+    ],
+    "list3" : [
+      {
+        "pic":"news1.png",
+        "name":{
+          "TM":"Rysgal gazeti üpjünçiligini ösdürmek üçin maliýe goldawy türkmen biznesine berler.",
+          "RU":"Туркменскому бизнесу окажут финансовую поддержку по созданию ПО.",
+          "EN":"Financial support for software development will be provided to Turkmen business."
+        },
+        "title":{
+          "TM":"Milli ykdysadyýetde yzygiderli durmuşa geçirmek arkaly sanly ykdysadyýeti döretmek üçin.",
+          "RU":"В целях формирования цифровой экономики посредством планомерного внедрения в национальную экономику.",
+          "EN":"In order to form a digital economy through systematic implementation in the national economy."
+        },
+        "date": {
+          "TM":"31 awgust 2021",
+          "RU":"31 августа 2021",
+          "EN":"31 august 2021"
+        },
+        "id":1
+      },
+      {
+        "pic":"news2.png",
+        "name":{
+          "TM":"Programma  ösdürmek üçin maliýe goldawy türkmen biznesine berler.",
+          "RU":"Туркменскому бизнесу окажут финансовую поддержку по созданию ПО.",
+          "EN":"Financial support for software development will be provided to Turkmen business."
+        },
+        "title":{
+          "TM":"Milli ykdysadyýetde yzygiderli durmuşa geçirmek arkaly sanly ykdysadyýeti döretmek üçin.",
+          "RU":"В целях формирования цифровой экономики посредством планомерного внедрения в национальную экономику.",
+          "EN":"In order to form a digital economy through systematic implementation in the national economy."
+        },
+        "date": {
+          "TM":"31 awgust 2021",
+          "RU":"31 августа 2021",
+          "EN":"31 august 2021"
+        },
+        "id":2
+      },
+      {
+        "pic":"news3.png",
+        "name":{
+          "TM":"Programma üpjünçiligini ösdürmek üçin maliýe goldawy türkmen biznesine berler.",
+          "RU":"Туркменскому бизнесу окажут финансовую поддержку по созданию ПО.",
+          "EN":"Financial support for software development will be provided to Turkmen business."
+        },
+        "title":{
+          "TM":"Milli ykdysadyýetde yzygiderli durmuşa geçirmek arkaly sanly ykdysadyýeti döretmek üçin.",
+          "RU":"В целях формирования цифровой экономики посредством планомерного внедрения в национальную экономику.",
+          "EN":"In order to form a digital economy through systematic implementation in the national economy."
+        },
+        "date": {
+          "TM":"31 awgust 2021",
+          "RU":"31 августа 2021",
+          "EN":"31 august 2021"
+        },
+        "id":3
+      },
+      {
+        "pic":"news4.png",
+        "name":{
+          "TM":"Programma üpjünçiligini ösdürmek üçin maliýe goldawy türkmen biznesine berler.",
+          "RU":"Туркменскому бизнесу окажут финансовую поддержку по созданию ПО.",
+          "EN":"Financial support for software development will be provided to Turkmen business."
+        },
+        "title":{
+          "TM":"Milli ykdysadyýetde yzygiderli durmuşa geçirmek arkaly sanly ykdysadyýeti döretmek üçin.",
+          "RU":"В целях формирования цифровой экономики посредством планомерного внедрения в национальную экономику.",
+          "EN":"In order to form a digital economy through systematic implementation in the national economy."
+        },
+        "date": {
+          "TM":"31 awgust 2021",
+          "RU":"31 августа 2021",
+          "EN":"31 august 2021"
+        },
+        "id":4
+      }
+    ],
+    "banner":[
+      {
+        "banner":[
+          {
+            "pic":"kerwen1.png",
+            "link":"www.google.com"
+          },
+          {
+            "pic":"kerwen2.png",
+            "link":"www.google.com"
+          }
+        ]
+      },
+      {
+        "banner":[
+          {
+            "pic":"kerwen1.png",
+            "link":"www.google.com"
+          },
+          {
+            "pic":"kerwen2.png",
+            "link":"www.google.com"
+          }
+        ]
+      },
+      {
+        "banner":[
+          {
+            "pic":"kerwen1.png",
+            "link":"www.google.com"
+          },
+          {
+            "pic":"kerwen2.png",
+            "link":"www.google.com"
+          },
+          {
+            "pic":"kerwen3.png",
+            "link":"www.google.com"
+          }
+        ]
+      }
+    ],
+    "karhanalar" : [
+      {
+        "name":{
+          "TM":"Biologia bolumi",
+          "RU":"Кафедра биологии",
+          "EN":"Department of "
+        },
+        "id":1
+      },
+      {
+        "name":{
+          "TM":"Biologia bolumi",
+          "RU":"Кафедра биологии",
+          "EN":"Department of Biology"
+        },
+        "id":2
+      },
+      {
+        "name":{
+          "TM":"Biologia bolumi",
+          "RU":"Кафедра биологии",
+          "EN":"Department of Biology"
+        },
+        "id":3
+      },
+      {
+        "name":{
+          "TM":"Biologia bolumi",
+          "RU":"Кафедра биологии",
+          "EN":"Department of Biology"
+        },
+        "id":4
+      },
+      {
+        "name":{
+          "TM":"Biologia bolumi",
+          "RU":"Кафедра биологии",
+          "EN":"Department of Biology"
+        },
+        "id":5
+      },
+      {
+        "name":{
+          "TM":"Biologia bolumi",
+          "RU":"Кафедра биологии",
+          "EN":"Department of Biology"
+        },
+        "id":6
+      },
+      {
+        "name":{
+          "TM":"Biologia bolumi",
+          "RU":"Кафедра биологии",
+          "EN":"Department of Biology"
+        },
+        "id":7
+      }
+    ],
+    "brands" : [
+      {
+        "brandlogo" : "windows.png",
+        "brandName" :{
+          "RU":"Корпорация Microsoft",
+          "TM":"Mikrosoft birleshigi",
+          "EN":"Branch of Microsoft"
+        },
+        "id":1
+      },
+      {
+        "brandlogo" : "samsung.png",
+        "brandName" :{
+          "RU":"Корпорация Microsoft",
+          "TM":"Samsung Elektrik merkezi orta aziyada",
+          "EN":"Samsung Electronics Central Asia"
+        } ,
+        "id":2
+      },
+      {
+        "brandlogo" : "unreal.png",
+        "brandName" :{
+          "RU":"Корпорация Microsoft",
+          "TM":"Unreal enjam 5 Oyun beti",
+          "EN":"Epic Games Unreal Engine 5 beta"
+        } ,
+        "id":3
+      },
+      {
+        "brandlogo" : "asus.png",
+        "brandName" :{
+          "RU":"Корпорация Microsoft",
+          "TM":"Asus oyunchylar respublikasy",
+          "EN":"ASUS Republic of Gamers"
+        } ,
+        "id":4
+      }
+    ],
+    "location" : [
+      {
+        "place": {
+          "TM":"Asgabat",
+          "RU":"Asgabat",
+          "EN":"Ashgabat"
+        },
+        "adress":{
+          "TM":"Magtymguly shayolynyn 5-nji jayynyn 6-njy oyi",
+          "RU":"Magtymguly shayolynyn 5-nji jayynyn 6-njy oyi",
+          "EN":"Magtymguly shayolynyn 5-nji jayynyn 6-njy oyi"
+        },
+        "phone":  [99364813309,99364374578],
+        "faks":      [8373738292],
+        "email":      ["hydyrowayhan8@gmail.com"]
+      },
+      {
+        "place": {
+          "TM":"Ahal",
+          "RU":"Ahal",
+          "EN":"Ahal"
+        },
+        "adress":{
+          "TM":"Magtymguly shayolynyn 5-nji jayynyn 6-njy oyi",
+          "RU":"Magtymguly shayolynyn 5-nji jayynyn 6-njy oyi",
+          "EN":"Magtymguly shayolynyn 5-nji jayynyn 6-njy oyi"
+        },
+        "phone":  [99364813309,99364374578],
+        "faks":      [8373738292],
+        "email":      ["hydyrowayhan8@gmail.com"]
+      },
+      {
+        "place": {
+          "TM":"Mary",
+          "RU":"Mary",
+          "EN":"Mary"
+        },
+        "adress":{
+          "TM":"Mary shayolynyn 5-nji jayynyn 6-njy oyi",
+          "RU":"Mary shayolynyn 5-nji jayynyn 6-njy oyi",
+          "EN":"Mary shayolynyn 5-nji jayynyn 6-njy oyi"
+        },
+        "phone":  [99364813309,99364374578],
+        "faks":      [8373738292],
+        "email":      ["hydyrowayhan8@gmail.com"]
+      },
+      {
+        "place": {
+          "TM":"Lebap",
+          "RU":"Lebapru",
+          "EN":"Lebapen"
+        },
+        "adress":{
+          "TM":"Lebaptm shayolynyn 5-nji jayynyn 6-njy oyi",
+          "RU":"Lebapru shayolynyn 5-nji jayynyn 6-njy oyi",
+          "EN":"Lebapen shayolynyn 5-nji jayynyn 6-njy oyi"
+        },
+        "phone":  [99364813309,99364374578],
+        "faks":      [8373738292],
+        "email":      ["hydyrowayhan8@gmail.com"]
+      },
+      {
+        "place": {
+          "TM":"Dashoguz",
+          "RU":"Dasoguz",
+          "EN":"Dashoguz"
+        },
+        "adress":{
+          "TM":"Dashoguztm shayolynyn 5-nji jayynyn 6-njy oyi",
+          "RU":"Dashoguzru shayolynyn 5-nji jayynyn 6-njy oyi",
+          "EN":"Dashoguzen shayolynyn 5-nji jayynyn 6-njy oyi"
+        },
+        "phone":  [99364813309,99364374578],
+        "faks":      [8373738292],
+        "email":      ["Dashoguzhydyrowayhan8@gmail.com"]
+      },
+      {
+        "place": {
+          "TM":"Balkantm",
+          "RU":"Balkanru",
+          "EN":"Balkanen"
+        },
+        "adress":{
+          "TM":"Balkantm shayolynyn 5-nji jayynyn 6-njy oyi",
+          "RU":"Balkanru shayolynyn 5-nji jayynyn 6-njy oyi",
+          "EN":"Balkanen shayolynyn 5-nji jayynyn 6-njy oyi"
+        },
+        "phone":  [99364813309,99364374578],
+        "faks":      [8373738292],
+        "email":      ["Balkan@gmail.com"]
+      }
+    ],
+    "sponserler" : [
+      {
+        "brandlogo" : "windows.png",
+        "brandName" : "Windows"
+      },
+      {
+        "brandlogo" : "doner.png",
+        "brandName" : "Bet doner chykaryan yer"
+      },
+      {
+        "brandlogo" : "asus.png",
+        "brandName" : "Gaty gowy komputerler cykaryarda"
+      },
+      {
+        "brandlogo" : "unreal.png",
+        "brandName" : "yaman bet oyunlar yasayar"
+      }
+    ],
+    "statictika" : ["Gowrak 121232","Gowrak 223","13 yyl siz bilen","80300 Gowrak"]
+  } 

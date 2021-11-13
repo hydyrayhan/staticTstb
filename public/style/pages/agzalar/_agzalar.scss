@@ -1,0 +1,163 @@
+@import "../../src/color";
+
+section.agzalar{
+    background: $notWhite;
+    padding-bottom: 100px;
+    .agzalarHeader{
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 35px;
+        color: $black;
+        margin-top: 30px;
+    }
+    .agzalarWelayatlar{
+        display: flex;
+        color: $gray;
+        border-bottom: 2px solid rgba(153, 153, 153, 0.3);
+        // outline-offset: -10px;
+        @include mobile{
+            overflow-x: scroll;
+        }
+        div{
+            padding: 20px 0 10px;
+            margin-right: 20px; 
+            margin-bottom: -2px;
+            font-weight: 600;
+            cursor: pointer;
+            @include mobile{
+                margin-bottom: 0;
+            }
+        }
+        .active{
+            color: $black;
+            border-bottom: 2px solid $blue;
+            z-index: 5;
+        }
+    }
+    .selection{
+        @include center(flex-start);
+        color: $black;
+        margin-top: 20px;
+        select{
+            padding: 8px;
+            margin-left: 50px;
+            width: 200px;
+            border: 1px solid rgba(153, 153, 153, 0.6);
+            outline: none;
+            color: $black;
+            border-radius: 3px;
+            option{
+                color: $black;
+            }
+        }
+    }
+    .listContainer{
+        margin-top: 40px;
+        display: none;
+        .agzalarList{
+            background: white;
+            border-radius: 8px;
+            margin-top: 20px;
+            .main{
+                @include center(space-between,flex-start);
+                cursor: pointer;
+                padding: 20px 40px; 
+                border-radius: 8px;
+                background-color: white;
+                .logo{
+                    margin-right: 40px;
+                    min-width: 65px;
+                    min-height: 65px;
+                    margin-top: 10px;
+                    @include center();
+                    img{
+                        width: 100%;
+                    }
+                }
+                .text{
+                    margin-right: 40px;
+                    width: 100%;
+                    .listHead{
+                        font-weight: 600;
+                        color: $notBlack;
+                        margin-bottom: 5px;
+                    }
+                    .listText{
+                        color: $notBlack;
+                    }
+                    .textDots{
+                        text-overflow: ellipsis;
+                        overflow:hidden;
+                        display: -webkit-box !important;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        white-space: normal;
+                    }
+                }
+                .icon{
+                    min-width: 12px;
+                    margin: auto 0 auto 0;
+                    @include mobile{
+                        margin-top: 40px;
+                    }
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .full{
+                padding: 20px 40px;
+                display: none;
+                .adress{
+                    color: $gray;
+                    margin-bottom: 5px;
+                }
+                .adressInfo{
+                    margin-bottom: 20px;
+                }
+                .right{
+                    display: flex;
+                    .adresses{
+                        padding-right: 40px;
+                        margin-bottom: 20px;
+                    }
+                    .links{
+                        display: flex;
+                        flex-direction: column;
+                        a{
+                            text-decoration: none;
+                            color: $blue;
+                        }
+                    }
+                }
+                .filesCon{
+                    display: flex;
+                    flex-wrap: wrap;
+                    .file{
+                        display: flex;
+                        width: 30%;
+                        @include mobile{
+                            width: 100%;
+                        }
+                        margin-top: 5px;
+                        margin-bottom: 10px;
+                        .icon{
+                            margin-right: 20px;
+                        }
+                        .fileRight{
+                            .name{
+                                a{
+                                    color: $blue;
+                                    text-decoration: none;
+                                }
+                            }
+                            .kb{
+                                color: $gray;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
+</head>
+
+<body>
+    <%- include ('../admin.ejs') %>
+    <div class="adminContainer">
+        <div class="main">
+            <div class="pageHeader">
+                <%= name %> 
+            </div>
+        </div>
+    <form action="/admin/gazetler" method="POST" id="identifier">
+        <div class="adminTable">
+                <div class="formInputs addHabar form1">
+                    <div class="box imgBox">
+                        <div class="headerCon">
+                            <label class="mazmuny" for="">Turkmençe ady:</label>
+                            <input type="text" name="tm" class="header" >
+                        </div>
+                        <div class="headerCon">
+                            <label class="mazmuny" for="">Rusça ady:</label>
+                            <input type="text" name="tm" class="header" >
+                        </div>
+                        <div class="headerCon">
+                            <label class="mazmuny" for="">Iňlisçe headeri:</label>
+                            <input type="text" name="headerTM" class="header" >
+                        </div>
+
+                        <div  style="display: flex; justify-content: space-between;">
+                            <div style="margin-right: 20px; width: 60%;">
+                                <div class="headerCon">
+                                    <div class="suratHeader">
+                                        <label for="">Faýl [PDF] giriziň:</label>
+                                        <label for="sowdaSurat">Faýl goşmak <img src="/pictures/icon/plus.svg" alt=""></label>
+                                        <input type="file" onchange="takeImg(event)" id="sowdaSurat" style="display: none;">
+                                    </div>
+                                </div>
+                                <label for="" class="imgsCon">
+                                    <!-- js bilen bir tag gelyar surat yok bolondo default surat gelyan -->
+                                    <div class="imgCon pdfCon">
+                                        <!-- js bilen doldurylyar surat goyulyar -->
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="extraInputs" style="align-items: normal; margin-top: 52px;">
+                                <div class="date" style="margin-right: 10px;">
+                                    <div class="name">M.girizilen senesi:</div>
+                                    <input type="date" name="date">
+                                </div>
+                                <div class="ishjen">
+                                    <div class="head">Işjeň:</div>
+                                    <input type="checkbox" checked name="habarIshjen" id="">
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <div class="box imgBox">
+                        <div class="mazmun" style="margin-top: 22px;">Suraty giriziň:</div>
+                        <div class="inputs">
+                            <p><input type="file"  accept="image/*" name="image" id="img0" onchange="loadFil(event,0)" class="1" style="display: none;"></p>
+                            <label class="imgLbCon" for="img0"><img id="output" src="/pictures/icon/addPicture.svg" /></label>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="formInputs addHabar form2">
+
+                </div>
+
+
+            <div class="submitCon">
+                <input class="save" type="submit" value="Ýatda sakla">
+            </div>
+        </div>
+    </form>
+    </div>
+
+
+    <script>
+        var imgCount = 0;
+        var delCount = 0;
+        var imgs = [];
+        function takeImg(event){
+            if(event.target.files[0] != undefined){
+                var imgCon = document.querySelector(".imgCon");
+                imgCon.innerHTML += `
+                                    <div class="div pdf ${delCount}">
+                                        <img class="img" src="/pictures/icon/pdfRed.png" alt="hjhjhj">
+                                        <div class="imgDelete" onclick="delImg(${delCount})"><img src="/pictures/icon/delete.svg"  alt=""></div>
+                                        <div class="name"></div>
+                                    </div>`;
+                
+                var img = document.querySelectorAll(".imgCon .div .name");
+    
+                img[imgCount].textContent = event.target.files[0].name;
+                var obj = {
+                    id:delCount,
+                    event:event.target.files[0]
+                }
+                imgCount+=1;
+                delCount+=1;
+                imgs.push(obj);
+                imgLen();
+            }
+        }
+    
+        function delImg(san){
+            var imgCon = document.querySelectorAll(".imgCon .div");
+            for(var i = 0; i<imgs.length; i++){
+                if(imgs[i].id == san){
+                    imgs.splice(i,1);
+                }
+            }
+    
+            for(var i = 0; i<imgCon.length ; i++){
+                var a = imgCon[i].classList.contains(san);
+                if(a){
+                    imgCon[i].remove();
+                    break;
+                }
+            }
+            
+            imgCount-=1;
+            imgLen();
+        }
+    
+        var bool = false;
+        function imgLen(){
+            if(imgs.length==0){
+                var imgsCon = document.querySelector(".imgsCon");
+                var imgCon = document.querySelector(".imgCon");
+                imgCon.style.height = "0";
+                var old = imgsCon.innerHTML;
+                imgsCon.innerHTML = `<div class="noneImg" style="height:100px">
+                                        <img style="filter: invert(1); opacity:0.7; width:30px" src="/pictures/icon/pdf.svg" alt="">
+                                    </div>`+old;
+                bool = true;
+            }else if(imgs.length == 1 && bool){
+                var imgNone = document.querySelector(".noneImg");
+                imgNone.remove();
+                var imgCon = document.querySelector(".imgCon");
+                imgCon.style.height = "100px";
+                bool = false;
+            }
+        }
+        imgLen();
+    
+        var logo;
+    
+
+        var img;
+        var loadFil = function(event,el) {
+            var image = document.querySelector('#output');
+            
+            image.src = URL.createObjectURL(event.target.files[0]);
+            image.style.width = "100%";
+            image.style.height = "100%";
+            img = document.querySelectorAll(".inputs p input");
+            logo = event.target.files[0]
+
+        };
+
+        var submit = document.querySelector(".save");
+        submit.addEventListener("click",async function(e){
+            var data = new FormData();
+            console.log(imgs);
+            console.log(logo);
+            data.append('img0',logo);
+            for(var i = 1; i<=imgs.length; i++){
+                data.append(`img${i}`,imgs[i-1].event)
+            }
+            const option = {
+                method : "POST",
+                body : data
+            }
+            await fetch('/picture/admin/gazetler',option)
+        })
+    </script>
+
+<script>
+    dropActive(0,3);
+</script>
+
+    <!-- picture show when i choose from file and send to node with fetch-->
+    <script>
+        var img;
+        var loadFile = function(event,el) {
+            var image = document.querySelector('#output');
+            
+            image.src = URL.createObjectURL(event.target.files[0]);
+            image.style.width = "100%";
+            image.style.height = "100%";
+            img = document.querySelectorAll(".inputs p input");
+
+        };
+        
+        async function send(addGalleryImage){
+            var data = new FormData();
+            addGalleryImage = addGalleryImage[0].files[0]
+            data.append(`img`,addGalleryImage);
+
+            const option = {
+                method: "POST",
+                body:data
+            }
+            
+            await fetch("/picture/admin/karhanalar",option);
+        }
+
+        var submit = document.querySelector(".save");
+
+        submit.addEventListener("click",async function(e){
+            await send(img);
+        })
+
+    </script>
+
+</body>
+</html>
+
+

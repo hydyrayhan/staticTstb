@@ -1,0 +1,58 @@
+section.agzalar{
+    .container{
+        .docCon{
+            width: 100%;
+            a{
+                text-decoration: none;
+                color: $black;
+                div{
+                    background: white;
+                    padding: 30px;
+                    margin-bottom: 20px;
+                }
+            }
+        } 
+        .header{
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .content{
+            font-size: 14px;
+            color: $black;
+        }
+
+        .adress{
+            color: $gray;
+            margin-bottom: 10px;
+            margin-top: 30px ;
+        }
+
+        .filesCon{
+            display: flex;
+            flex-wrap: wrap;
+            .file{
+                display: flex;
+                width: 30%;
+                @include mobile{
+                    width: 100%;
+                }
+                margin-top: 5px;
+                margin-bottom: 10px;
+                .icon{
+                    margin-right: 20px;
+                }
+                .fileRight{
+                    .name{
+                        a{
+                            color: $blue;
+                            text-decoration: none;
+                        }
+                    }
+                    .kb{
+                        color: $gray;
+                    }
+                }
+            }
+        }
+    }
+}

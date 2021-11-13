@@ -1,0 +1,28 @@
+{
+  "name": "tstb_Site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "@splidejs/splide": "^2.4.21",
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "express-formidable": "^1.2.0",
+    "jquery": "^3.6.0",
+    "nodemon": "^2.0.12",
+    "quill": "^1.3.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include ('../src/header.ejs') %>
+
+
+
+<section class="agzalar">
+    <div class="container">
+        <div class="agzalarHeader">Бизнес-планы</div>
+        <div class="listContainer" style="display: block;">
+                <div class="agzalarList">
+                    <div class="main">
+                        <div class="text">
+                            <div class="listHead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, quae? </div>
+                            <div class="listText textDots" >Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quos placeat incidunt perspiciatis, reiciendis harum maxime numquam aliquid error fugit voluptatem nesciunt ipsa deleniti delectus repudiandae consequuntur adipisci ad tempora saepe veniam, dolorum magni! Fuga, repellat. Id quaerat tempora aliquid fugit a saepe totam illo quo, doloribus ullam ratione vero eaque similique voluptate nam unde. Voluptatem consectetur eos commodi ea perspiciatis! Perferendis ullam reiciendis velit qui, temporibus quaerat illo delectus deserunt voluptate odit iste nihil tempore consectetur ducimus veniam pariatur hic autem animi debitis sunt minima esse fugit fuga maxime. Ipsum corporis neque officia quia eius accusantium amet praesentium veritatis? ipsum dolor, sit amet consectetur adipisicing elit. Suscipit, similique impedit? Quos quas incidunt consequatur amet itaque iure sint suscipit delectus fugiat quod harum doloremque veniam dignissimos temporibus est nostrum aliquam, dolore eius reprehenderit aspernatur optio nobis ea minima voluptates! Sint, itaque. Doloremque praesentium reprehenderit sapiente, atque earum possimus consequuntur omnis autem tempora quisquam quas repellat, deserunt cupiditate eligendi odit, accusantium provident. Earum libero esse corrupti, quia et tempora pariatur accusantium modi sit quibusdam magnam nam. Alias maiores blanditiis, perspiciatis fuga quas reprehenderit illo iusto dolores accusantium sed repellendus illum, eos saepe rerum sapiente tempore, a ipsum inventore. Error, asperiores? </div>
+                        </div>
+                        <div class="icon"><img src="/pictures/icon/grayRightArrow.svg" alt=""></div>
+                    </div>
+                    <div class="full">
+                        <div class="adress">Flayllar download etmek uchin</div>
+                        <div class="filesCon">
+                                <div class="file">
+                                    <div class="icon"><img src="/pictures/icon/file.svg" alt=""></div>
+                                    <div class="fileRight">
+                                        <div class="name"><a href="" download> Lorem, ipsum.</a></div>
+                                        <div class="kb">lorem</div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="agzalarList">
+                    <div class="main">
+                        <div class="text">
+                            <div class="listHead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, quae? </div>
+                            <div class="listText textDots" >Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quos placeat incidunt perspiciatis, reiciendis harum maxime numquam aliquid error fugit voluptatem nesciunt ipsa deleniti delectus repudiandae consequuntur adipisci ad tempora saepe veniam, dolorum magni! Fuga, repellat. Id quaerat tempora aliquid fugit a saepe totam illo quo, doloribus ullam ratione vero eaque similique voluptate nam unde. Voluptatem consectetur eos commodi ea perspiciatis! Perferendis ullam reiciendis velit qui, temporibus quaerat illo delectus deserunt voluptate odit iste nihil tempore consectetur ducimus veniam pariatur hic autem animi debitis sunt minima esse fugit fuga maxime. Ipsum corporis neque officia quia eius accusantium amet praesentium veritatis? ipsum dolor, sit amet consectetur adipisicing elit. Suscipit, similique impedit? Quos quas incidunt consequatur amet itaque iure sint suscipit delectus fugiat quod harum doloremque veniam dignissimos temporibus est nostrum aliquam, dolore eius reprehenderit aspernatur optio nobis ea minima voluptates! Sint, itaque. Doloremque praesentium reprehenderit sapiente, atque earum possimus consequuntur omnis autem tempora quisquam quas repellat, deserunt cupiditate eligendi odit, accusantium provident. Earum libero esse corrupti, quia et tempora pariatur accusantium modi sit quibusdam magnam nam. Alias maiores blanditiis, perspiciatis fuga quas reprehenderit illo iusto dolores accusantium sed repellendus illum, eos saepe rerum sapiente tempore, a ipsum inventore. Error, asperiores? </div>
+                        </div>
+                        <div class="icon"><img src="/pictures/icon/grayRightArrow.svg" alt=""></div>
+                    </div>
+                    <div class="full">
+                        <div class="adress">Flayllar download etmek uchin</div>
+                        <div class="filesCon">
+                                <div class="file">
+                                    <div class="icon"><img src="/pictures/icon/file.svg" alt=""></div>
+                                    <div class="fileRight">
+                                        <div class="name"><a href="" download> Lorem, ipsum.</a></div>
+                                        <div class="kb">lorem</div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+        </div> 
+    </div>
+</section>
+
+
+    <%- include ('../src/bottom.ejs') %>
+
+    <!-- 7 sany page navbardaky sholara active beryar -->
+    <script>active(4)</script>
+
+    <script>
+        const list = document.querySelectorAll(".agzalarList .main");
+        
+        var bul = true;
+        // if(id>=0){
+
+        // }else{
+
+        // }
+
+
+        for(var i = 0; i<list.length; i++){
+            list[i].addEventListener("click",function(){
+                if(this.style.backgroundColor == "white" || bul){
+                    for(var j = 0; j<list.length; j++){
+                        clothes(list[j])
+                    }
+                    open(this);
+                }else{
+                    clothes(this);
+                    bul = true;
+                }
+            })
+        }
+
+
+        function clothes(e){
+            e.childNodes[1].childNodes[3].classList.add("textDots")
+            e.nextSibling.nextSibling.style.display = "none";
+            e.parentNode.style.border = "none";
+            e.style.backgroundColor = "white";
+            var child = e.childNodes[3].childNodes[0];
+            child.setAttribute("src","/pictures/icon/grayRightArrow.svg");
+            e.childNodes[3].style.minWidth = "12px";
+            e.childNodes[3].style.margin = "auto 0";
+        }
+        function open(e){
+            e.childNodes[1].childNodes[3].classList.remove("textDots")
+            e.nextSibling.nextSibling.style.display = "block"
+            e.style.backgroundColor = "#F3F3F2";
+            e.parentNode.style.border = "1px solid #2058D4"
+            var child = e.childNodes[3].childNodes[0];
+            child.setAttribute("src","/pictures/icon/downBlue.svg");
+            e.childNodes[3].style.minWidth = "20px";
+            e.childNodes[3].style.marginTop = "20px";
+            bul = false;
+        }
+    </script>
+</body>
+</html>

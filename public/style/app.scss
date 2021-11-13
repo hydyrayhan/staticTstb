@@ -1,0 +1,53 @@
+
+// Main page sections
+@import './src/header/nav2';
+@import './src/color';
+@import './src/sections/newsSection';
+@import './src/sections/swkSection';
+@import './src/sections/brandSection';
+@import './src/sections/locationSection';
+@import './src/sections/sponserler';
+@import './src/sections/bottom';
+@import './src/sections/header';
+
+// Press Center pages
+@import './pages/pressCenter/navbarSection';
+@import './pages/pressCenter/allNewsSection';
+
+
+// Gazet pages
+@import './pages/gazet/gazet';
+// Karhana pages
+@import './pages/karhana/karhana';
+
+// agzalar page
+@import "./pages/agzalar/agzalar";
+
+// sppt page
+@import "./pages/sppt/sppt";
+
+// membership page
+@import "./pages/membership/membership";
+
+// business page
+@import "./pages/business/business";
+
+// plans page
+@import "./pages/plans/plans";
+
+// lisense page
+@import "./pages/lisense/lisense";
+
+// consultation page
+@import "./pages/consultation/consultation";
+
+// login page
+@import "./pages/login/login";
+
+// templates 
+@import "./template/template";
+
+// admin page
+@import "./admin/leftBar";
+@import "./admin/habarlar";
+

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  .downBtn:hover svg path{
+    fill:#2058D4;
+  }
+  .showForPhone{
+    display: none;
+  }
+</style>
+<body>
+    <%- include ('../src/header.ejs') %>
+    <div class="karhanaPage">
+        <div class="container">
+          <div class="forPhone">
+            <div class="warning">Выберите интересующую промышленность:</div>
+            <div class="phonekategori">
+              <div class="chosen" data-dynamic data-ru="<%-data[id-1].name.RU%>" data-tm="<%-data[id-1].name.TM%>" data-en="<%-data[id-1].name.EN%>"><%=data[id-1].name.RU%></div>
+              <div class="icon"><img src="/pictures/icon/downGray.svg" alt=""></div>
+            </div>
+            <div class="ifc">
+              
+              <div class="container">
+                <div class="tutor">Выберите категорию:</div>
+                <div class="space">
+                  <div class="subKarhana">
+                    <%for(var i = 0; i<data.length; i++){%>
+                      <div class="downBtn">
+                        <button  class="dropdown-btn" data-dynamic data-ru="<%-data[i].name.RU%>" data-tm="<%-data[i].name.TM%>" data-en="<%-data[i].name.EN%>"><%=data[i].name.RU%> ></button>
+                        <div class="downImg">
+                          <svg width="12" height="7" viewBox="0 0 12 7" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.71249 0.292501L5.5925 4.1725L9.4725 0.292501C9.86249 -0.0975003 10.4925 -0.0975003 10.8825 0.292501C11.2725 0.682501 11.2725 1.3125 10.8825 1.7025L6.2925 6.2925C5.9025 6.6825 5.27249 6.6825 4.8825 6.2925L0.2925 1.7025C-0.0975 1.3125 -0.0975 0.682501 0.2925 0.292501C0.682495 -0.0875003 1.32249 -0.0975003 1.71249 0.292501Z" fill="#323C44"/>
+                          </svg>                              
+                        </div>
+                      </div>
+                      <div class="dropdown-container">
+                        <%for(var j = 0; j<data[i].sub.length;j++){%>
+                          <a href="/karhana/<%=i+1%>?pudak=<%=j+1%>" class="link" data-dynamic data-ru="<%-data[i].sub[j].name.RU%>" data-tm="<%-data[i].sub[j].name.TM%>" data-en="<%-data[i].sub[j].name.EN%>"><%=data[i].sub[j].name.RU%></a>
+                        <%}%>
+                      </div>
+                    <%}%>
+                  </div>
+  
+                  <div class="back">
+                    <div class="img"><img src="/pictures/icon/leftBlackBigger.svg" alt=""></div>
+                    <div>Вернуться назад</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            <div class="karhanaPageName" data-dynamic data-ru="<%-data[id-1].name.RU%>" data-tm="<%-data[id-1].name.TM%>" data-en="<%-data[id-1].name.EN%>"><%=data[id-1].name.RU%></div>
+            <div class="karhanaBody">
+              <div class="leftNav">
+                  <div class="navName">Отрасли и предприятия:</div>
+                  <div class="sidenav">
+                    <div class="subKarhana">
+                      <%for(var i = 0; i<data.length; i++){%>
+                        <div class="downBtn">
+                          <button  class="dropdown-btn" data-dynamic data-ru="<%-data[i].name.RU%>" data-tm="<%-data[i].name.TM%>" data-en="<%-data[i].name.EN%>"><%=data[i].name.RU%> ></button>
+                          <div class="downImg">
+                            <svg width="12" height="7" viewBox="0 0 12 7" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1.71249 0.292501L5.5925 4.1725L9.4725 0.292501C9.86249 -0.0975003 10.4925 -0.0975003 10.8825 0.292501C11.2725 0.682501 11.2725 1.3125 10.8825 1.7025L6.2925 6.2925C5.9025 6.6825 5.27249 6.6825 4.8825 6.2925L0.2925 1.7025C-0.0975 1.3125 -0.0975 0.682501 0.2925 0.292501C0.682495 -0.0875003 1.32249 -0.0975003 1.71249 0.292501Z" fill="#323C44"/>
+                            </svg>                              
+                          </div>
+                        </div>
+                        <div class="dropdown-container">
+                          <%for(var j = 0; j<data[i].sub.length;j++){%>
+                            <a href="/karhana/<%=i+1%>?pudak=<%=j+1%>" class="link" data-dynamic data-ru="<%-data[i].sub[j].name.RU%>" data-tm="<%-data[i].sub[j].name.TM%>" data-en="<%-data[i].sub[j].name.EN%>"><%=data[i].sub[j].name.RU%></a>
+                          <%}%>
+                        </div>
+                      <%}%>
+                    </div>
+                </div>
+              </div>
+            <div class="karhanaPageNameMobile" data-dynamic data-ru="<%-data[id-1].name.RU%>" data-tm="<%-data[id-1].name.TM%>" data-en="<%-data[id-1].name.EN%>"><%=data[id-1].name.RU%></div>
+              <div class="karhanaContent">
+                <div class="pic"><img src="/pictures/news/gul.png" alt=""></div>
+                <div class="title" data-dynamic data-ru="<%-data[id-1].sub[pudak-1].title.RU%>" data-tm="<%-data[id-1].sub[pudak-1].title.TM%>" data-en="<%-data[id-1].sub[pudak-1].title.EN%>"><%=data[id-1].sub[pudak-1].title.RU%></div>
+                <div class="karhanaInfo" data-dynamic data-ru="<%-data[id-1].sub[pudak-1].text.RU%>" data-tm="<%-data[id-1].sub[pudak-1].text.TM%>" data-en="<%-data[id-1].sub[pudak-1].text.EN%>"><%=data[id-1].sub[pudak-1].text.RU%></div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <input type="hidden" class="id" value="<%=id%>">
+    <input type="hidden" class="pudak" value="<%=pudak%>">
+
+    <%- include ('../src/bottom.ejs') %>
+    <!-- drop downs -->
+    <script>
+      var dropdown = document.getElementsByClassName("downBtn");
+      var dropImg = document.getElementsByClassName("downBtn downImg");
+      var i;
+
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+          
+        this.classList.toggle("dropActive");
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+        } else {
+          dropdownContent.style.display = "block";
+        }
+        });
+      }
+      var li = document.querySelectorAll(".link");
+      for(var j = 0; j<li.length; j++){
+        li[j].addEventListener("click",function(){
+          for(var k = 0; k<li.length;k++){
+            li[k].style.color = "#323C44"
+          }
+          this.style.color = "#2058D4";
+        })
+      }
+
+
+      window.addEventListener("load",function(){
+        const id = document.querySelector(".id");
+        const pudak = document.querySelector(".pudak");
+
+        var subId = Number(id.value)-1;
+        var dropdownn = document.querySelectorAll(".sidenav .downBtn");
+        var dropodownn2 = document.querySelectorAll(".ifc .downBtn");
+        dropodownn2[subId].classList.add("active")
+        dropodownn2[subId].classList.add("dropActive")
+        dropdownn[subId].classList.add("active");
+        dropdownn[subId].classList.add("dropActive");
+        
+
+        var dropdownContent = dropdownn[subId].nextElementSibling;
+        var dropdownContent2 = dropodownn2[subId].nextElementSibling;
+        var pudakId = pudak.value*2-1
+        dropdownContent.childNodes[pudakId].style.color = "#2058D4";
+        if (dropdownContent.style.display !== "block") {
+        dropdownContent.style.display = "block";
+        }
+        dropdownContent2.childNodes[pudakId].style.color = "#2058D4";
+        if (dropdownContent2.style.display !== "block") {
+        dropdownContent2.style.display = "block";
+        }
+      })
+      
+    </script>
+
+    <script>
+      var phoneCategori = document.querySelector(".phonekategori");
+      var back = document.querySelector(".back");
+      var ifc = document.querySelector(".ifc");
+      ifc.classList.add("showForPhone");
+      phoneCategori.addEventListener("click",function(){
+        ifc.classList.toggle("showForPhone");
+      })
+      back.addEventListener("click",function(){
+        ifc.classList.toggle("showForPhone");
+      })
+    </script>
+</body>
+</html>

@@ -1,0 +1,636 @@
+{
+    "tegs" : [
+      {
+        "name":{
+          "TM":"Bizin doreden priyekitlerimiz",
+          "RU":"Национальные проекты",
+          "EN":"These our products"
+        }
+      },
+      {
+        "name":{
+          "TM":"Bizin doreden priyekitlerimiz",
+          "RU":"Национальные проекты",
+          "EN":"These our products"
+        }
+      },
+      {
+        "name":{
+          "TM":"Bizin doreden priyekitlerimiz",
+          "RU":"Национальные проекты",
+          "EN":"These our products"
+        }
+      },
+      {
+        "name":{
+          "TM":"Bizin doreden priyekitlerimiz",
+          "RU":"Национальные проекты",
+          "EN":"These our products"
+        }
+      },
+      {
+        "name":{
+          "TM":"Bizin doreden priyekitlerimiz",
+          "RU":"Национальные проекты",
+          "EN":"These our products"
+        }
+      },
+      {
+        "name":{
+          "TM":"Bizin doreden priyekitlerimiz",
+          "RU":"Национальные проекты",
+          "EN":"These our products"
+        }
+      },
+      {
+        "name":{
+          "TM":"Bizin doreden priyekitlerimiz",
+          "RU":"Национальные проекты",
+          "EN":"These our products"
+        }
+      },
+      {
+        "name":{
+          "TM":"Umumy zatlar",
+          "RU":"Общество",
+          "EN":"Branch things"
+        }
+      },
+      {
+        "name":{
+          "TM":"Taze onumler",
+          "RU":"Новая продукция",
+          "EN":"New products"
+        }
+      },
+      {
+        "name":{
+          "TM":"Bizin doreden priyekitlerimiz",
+          "RU":"Национальные проекты",
+          "EN":"These our products"
+        }
+      },
+      {
+        "name":{
+          "TM":"Umumy zatlar",
+          "RU":"Общество",
+          "EN":"Branch things"
+        }
+      },
+      {
+        "name":{
+          "TM":"Taze onumler",
+          "RU":"Новая продукция",
+          "EN":"New products"
+        }
+      },
+      {
+        "name":{
+          "TM":"Bizin doreden priyekitlerimiz",
+          "RU":"Национальные проекты",
+          "EN":"These our products"
+        }
+      },
+      {
+        "name":{
+          "TM":"Umumy zatlar",
+          "RU":"Общество",
+          "EN":"Branch things"
+        }
+      },
+      {
+        "name":{
+          "TM":"Taze onumler",
+          "RU":"Новая продукция",
+          "EN":"New products"
+        }
+      }
+    ],
+    "ads" : ["kerwen1.png","kerwen2.png","kerwen3.png"],
+    "ads2" : ["kerwen1.png","kerwen2.png","kerwen3.png"],
+    "ads3" : ["kerwen1.png","kerwen2.png","kerwen3.png"],
+    "list" : [
+      {
+        "pic":"news1.png",
+        "name":{
+          "TM":"Salam bu turkmenche yagdayy",
+          "RU":"Zdrasdi eto ruski variant",
+          "EN":"Hello eto ruski variant"
+        },
+        "title":{
+          "TM":"Bu turkmenche title",
+          "RU":"Bu Ruscha title",
+          "EN":"Bu Englishche title"
+        },
+        "date": {
+          "RU":"31 августа 2021",
+          "TM":"31 awgust 2021",
+          "EN":"31 august 2021"
+        }
+      },
+      {
+        "pic":"news2.png",
+        "name":{
+          "TM":"Salam bu turkmenche yagdayy",
+          "RU":"Zdrasdi eto ruski variant",
+          "EN":"Hello eto ruski variant"
+        },
+        "title":{
+          "TM":"Bu turkmenche title",
+          "RU":"Bu Ruscha title",
+          "EN":"Bu Englishche title"
+        },
+        "date": {
+          "RU":"31 августа 2021",
+          "TM":"31 awgust 2021",
+          "EN":"31 august 2021"
+        }
+      },
+      {
+        "pic":"news3.png",
+        "name":{
+          "TM":"Salam bu turkmenche yagdayy",
+          "RU":"Zdrasdi eto ruski variant",
+          "EN":"Hello eto ruski variant"
+        },
+        "title":{
+          "TM":"Bu turkmenche title",
+          "RU":"Bu Ruscha title",
+          "EN":"Bu Englishche title"
+        },
+        "date": {
+          "RU":"31 августа 2021",
+          "TM":"31 awgust 2021",
+          "EN":"31 august 2021"
+        }
+      },
+      {
+        "pic":"news1.png",
+        "name":{
+          "TM":"Salam bu turkmenche yagdayy",
+          "RU":"Zdrasdi eto ruski variant",
+          "EN":"Hello eto ruski variant"
+        },
+        "title":{
+          "TM":"Bu turkmenche title",
+          "RU":"Bu Ruscha title",
+          "EN":"Bu Englishche title"
+        },
+        "date": {
+          "RU":"31 августа 2021",
+          "TM":"31 awgust 2021",
+          "EN":"31 august 2021"
+        }
+      },
+      {
+        "pic":"news2.png",
+        "name":{
+          "TM":"Salam bu turkmenche yagdayy",
+          "RU":"Zdrasdi eto ruski variant",
+          "EN":"Hello eto ruski variant"
+        },
+        "title":{
+          "TM":"Bu turkmenche title",
+          "RU":"Bu Ruscha title",
+          "EN":"Bu Englishche title"
+        },
+        "date": {
+          "RU":"31 августа 2021",
+          "TM":"31 awgust 2021",
+          "EN":"31 august 2021"
+        }
+      },
+      {
+        "pic":"news3.png",
+        "name":{
+          "TM":"Salam bu turkmenche yagdayy",
+          "RU":"Zdrasdi eto ruski variant",
+          "EN":"Hello eto ruski variant"
+        },
+        "title":{
+          "TM":"Bu turkmenche title",
+          "RU":"Bu Ruscha title",
+          "EN":"Bu Englishche title"
+        },
+        "date": {
+          "RU":"31 августа 2021",
+          "TM":"31 awgust 2021",
+          "EN":"31 august 2021"
+        }
+      },
+      {
+        "pic":"news1.png",
+        "name":{
+          "TM":"Salam bu turkmenche yagdayy",
+          "RU":"Zdrasdi eto ruski variant",
+          "EN":"Hello eto ruski variant"
+        },
+        "title":{
+          "TM":"Bu turkmenche title",
+          "RU":"Bu Ruscha title",
+          "EN":"Bu Englishche title"
+        },
+        "date": {
+          "RU":"31 августа 2021",
+          "TM":"31 awgust 2021",
+          "EN":"31 august 2021"
+        }
+      },
+      {
+        "pic":"news2.png",
+        "name":{
+          "TM":"Salam bu turkmenche yagdayy",
+          "RU":"Zdrasdi eto ruski variant",
+          "EN":"Hello eto ruski variant"
+        },
+        "title":{
+          "TM":"Bu turkmenche title",
+          "RU":"Bu Ruscha title",
+          "EN":"Bu Englishche title"
+        },
+        "date": {
+          "RU":"31 августа 2021",
+          "TM":"31 awgust 2021",
+          "EN":"31 august 2021"
+        }
+      },
+      {
+        "pic":"news3.png",
+        "name":{
+          "TM":"Salam bu turkmenche yagdayy",
+          "RU":"Zdrasdi eto ruski variant",
+          "EN":"Hello eto ruski variant"
+        },
+        "title":{
+          "TM":"Bu turkmenche title",
+          "RU":"Bu Ruscha title",
+          "EN":"Bu Englishche title"
+        },
+        "date": {
+          "RU":"31 августа 2021",
+          "TM":"31 awgust 2021",
+          "EN":"31 august 2021"
+        }
+      },
+      {
+        "pic":"news1.png",
+        "name":{
+          "TM":"Salam bu turkmenche yagdayy",
+          "RU":"Zdrasdi eto ruski variant",
+          "EN":"Hello eto ruski variant"
+        },
+        "title":{
+          "TM":"Bu turkmenche title",
+          "RU":"Bu Ruscha title",
+          "EN":"Bu Englishche title"
+        },
+        "date": {
+          "RU":"31 августа 2021",
+          "TM":"31 awgust 2021",
+          "EN":"31 august 2021"
+        }
+      },
+      {
+        "pic":"news2.png",
+        "name":{
+          "TM":"Salam bu turkmenche yagdayy",
+          "RU":"Zdrasdi eto ruski variant",
+          "EN":"Hello eto ruski variant"
+        },
+        "title":{
+          "TM":"Bu turkmenche title",
+          "RU":"Bu Ruscha title",
+          "EN":"Bu Englishche title"
+        },
+        "date": {
+          "RU":"31 августа 2021",
+          "TM":"31 awgust 2021",
+          "EN":"31 august 2021"
+        }
+      },
+      {
+        "pic":"news3.png",
+        "name":{
+          "TM":"Salam bu turkmenche yagdayy",
+          "RU":"Zdrasdi eto ruski variant",
+          "EN":"Hello eto ruski variant"
+        },
+        "title":{
+          "TM":"Bu turkmenche title",
+          "RU":"Bu Ruscha title",
+          "EN":"Bu Englishche title"
+        },
+        "date": {
+          "RU":"31 августа 2021",
+          "TM":"31 awgust 2021",
+          "EN":"31 august 2021"
+        }
+      },
+      {
+        "pic":"news1.png",
+        "name":{
+          "TM":"Salam bu turkmenche yagdayy",
+          "RU":"Zdrasdi eto ruski variant",
+          "EN":"Hello eto ruski variant"
+        },
+        "title":{
+          "TM":"Bu turkmenche title",
+          "RU":"Bu Ruscha title",
+          "EN":"Bu Englishche title"
+        },
+        "date": {
+          "RU":"31 августа 2021",
+          "TM":"31 awgust 2021",
+          "EN":"31 august 2021"
+        }
+      },
+      {
+        "pic":"news2.png",
+        "name":{
+          "TM":"Salam bu turkmenche yagdayy",
+          "RU":"Zdrasdi eto ruski variant",
+          "EN":"Hello eto ruski variant"
+        },
+        "title":{
+          "TM":"Bu turkmenche title",
+          "RU":"Bu Ruscha title",
+          "EN":"Bu Englishche title"
+        },
+        "date": {
+          "RU":"31 августа 2021",
+          "TM":"31 awgust 2021",
+          "EN":"31 august 2021"
+        }
+      },
+      {
+        "pic":"news3.png",
+        "name":{
+          "TM":"Salam bu turkmenche yagdayy",
+          "RU":"Zdrasdi eto ruski variant",
+          "EN":"Hello eto ruski variant"
+        },
+        "title":{
+          "TM":"Bu turkmenche title",
+          "RU":"Bu Ruscha title",
+          "EN":"Bu Englishche title"
+        },
+        "date": {
+          "RU":"31 августа 2021",
+          "TM":"31 awgust 2021",
+          "EN":"31 august 2021"
+        }
+      },
+      {
+        "pic":"news1.png",
+        "name":{
+          "TM":"Salam bu turkmenche yagdayy",
+          "RU":"Zdrasdi eto ruski variant",
+          "EN":"Hello eto ruski variant"
+        },
+        "title":{
+          "TM":"Bu turkmenche title",
+          "RU":"Bu Ruscha title",
+          "EN":"Bu Englishche title"
+        },
+        "date": {
+          "RU":"31 августа 2021",
+          "TM":"31 awgust 2021",
+          "EN":"31 august 2021"
+        }
+      },
+      {
+        "pic":"news2.png",
+        "name":{
+          "TM":"Salam bu turkmenche yagdayy",
+          "RU":"Zdrasdi eto ruski variant",
+          "EN":"Hello eto ruski variant"
+        },
+        "title":{
+          "TM":"Bu turkmenche title",
+          "RU":"Bu Ruscha title",
+          "EN":"Bu Englishche title"
+        },
+        "date": {
+          "RU":"31 августа 2021",
+          "TM":"31 awgust 2021",
+          "EN":"31 august 2021"
+        }
+      },
+      {
+        "pic":"news3.png",
+        "name":{
+          "TM":"Salam bu turkmenche yagdayy",
+          "RU":"Zdrasdi eto ruski variant",
+          "EN":"Hello eto ruski variant"
+        },
+        "title":{
+          "TM":"Bu turkmenche title",
+          "RU":"Bu Ruscha title",
+          "EN":"Bu Englishche title"
+        },
+        "date": {
+          "RU":"31 августа 2021",
+          "TM":"31 awgust 2021",
+          "EN":"31 august 2021"
+        }
+      },
+      {
+        "pic":"news3.png",
+        "name":{
+          "TM":"Salam bu turkmenche yagdayy",
+          "RU":"Zdrasdi eto ruski variant",
+          "EN":"Hello eto ruski variant"
+        },
+        "title":{
+          "TM":"Bu turkmenche title",
+          "RU":"Bu Ruscha title",
+          "EN":"Bu Englishche title"
+        },
+        "date": {
+          "RU":"31 августа 2021",
+          "TM":"31 awgust 2021",
+          "EN":"31 august 2021"
+        }
+      },
+      {
+        "pic":"news3.png",
+        "name":{
+          "TM":"Salam bu turkmenche yagdayy",
+          "RU":"Zdrasdi eto ruski variant",
+          "EN":"Hello eto ruski variant"
+        },
+        "title":{
+          "TM":"Bu turkmenche title",
+          "RU":"Bu Ruscha title",
+          "EN":"Bu Englishche title"
+        },
+        "date": {
+          "RU":"31 августа 2021",
+          "TM":"31 awgust 2021",
+          "EN":"31 august 2021"
+        }
+      },
+      {
+        "pic":"news3.png",
+        "name":{
+          "TM":"Salam bu turkmenche yagdayy",
+          "RU":"Zdrasdi eto ruski variant",
+          "EN":"Hello eto ruski variant"
+        },
+        "title":{
+          "TM":"Bu turkmenche title",
+          "RU":"Bu Ruscha title",
+          "EN":"Bu Englishche title"
+        },
+        "date": {
+          "RU":"31 августа 2021",
+          "TM":"31 awgust 2021",
+          "EN":"31 august 2021"
+        }
+      },
+      {
+        "pic":"news3.png",
+        "name":{
+          "TM":"Salam bu turkmenche yagdayy",
+          "RU":"Zdrasdi eto ruski variant",
+          "EN":"Hello eto ruski variant"
+        },
+        "title":{
+          "TM":"Bu turkmenche title",
+          "RU":"Bu Ruscha title",
+          "EN":"Bu Englishche title"
+        },
+        "date": {
+          "RU":"31 августа 2021",
+          "TM":"31 awgust 2021",
+          "EN":"31 august 2021"
+        }
+      },
+      {
+        "pic":"news3.png",
+        "name":{
+          "TM":"Salam bu turkmenche yagdayy",
+          "RU":"Zdrasdi eto ruski variant",
+          "EN":"Hello eto ruski variant"
+        },
+        "title":{
+          "TM":"Bu turkmenche title",
+          "RU":"Bu Ruscha title",
+          "EN":"Bu Englishche title"
+        },
+        "date": {
+          "RU":"31 августа 2021",
+          "TM":"31 awgust 2021",
+          "EN":"31 august 2021"
+        }
+      },
+      {
+        "pic":"news3.png",
+        "name":{
+          "TM":"Salam bu turkmenche yagdayy",
+          "RU":"Zdrasdi eto ruski variant",
+          "EN":"Hello eto ruski variant"
+        },
+        "title":{
+          "TM":"Bu turkmenche title",
+          "RU":"Bu Ruscha title",
+          "EN":"Bu Englishche title"
+        },
+        "date": {
+          "RU":"31 августа 2021",
+          "TM":"31 awgust 2021",
+          "EN":"31 august 2021"
+        }
+      },
+      {
+        "pic":"news3.png",
+        "name":{
+          "TM":"Salam bu turkmenche yagdayy",
+          "RU":"Zdrasdi eto ruski variant",
+          "EN":"Hello eto ruski variant"
+        },
+        "title":{
+          "TM":"Bu turkmenche title",
+          "RU":"Bu Ruscha title",
+          "EN":"Bu Englishche title"
+        },
+        "date": {
+          "RU":"31 августа 2021",
+          "TM":"31 awgust 2021",
+          "EN":"31 august 2021"
+        }
+      },
+      {
+        "pic":"news1.png",
+        "name":{
+          "TM":"Salam bu turkmenche yagdayy",
+          "RU":"Zdrasdi eto ruski variant",
+          "EN":"Hello eto ruski variant"
+        },
+        "title":{
+          "TM":"Bu turkmenche title",
+          "RU":"Bu Ruscha title",
+          "EN":"Bu Englishche title"
+        },
+        "date": {
+          "RU":"31 августа 2021",
+          "TM":"31 awgust 2021",
+          "EN":"31 august 2021"
+        }
+      },
+      {
+        "pic":"news2.png",
+        "name":{
+          "TM":"Salam bu turkmenche yagdayy",
+          "RU":"Zdrasdi eto ruski variant",
+          "EN":"Hello eto ruski variant"
+        },
+        "title":{
+          "TM":"Bu turkmenche title",
+          "RU":"Bu Ruscha title",
+          "EN":"Bu Englishche title"
+        },
+        "date": {
+          "RU":"31 августа 2021",
+          "TM":"31 awgust 2021",
+          "EN":"31 august 2021"
+        }
+      },
+      {
+        "pic":"news3.png",
+        "name":{
+          "TM":"Salam bu turkmenche yagdayy",
+          "RU":"Zdrasdi eto ruski variant",
+          "EN":"Hello eto ruski variant"
+        },
+        "title":{
+          "TM":"Bu turkmenche title",
+          "RU":"Bu Ruscha title",
+          "EN":"Bu Englishche title"
+        },
+        "date": {
+          "RU":"31 августа 2021",
+          "TM":"31 awgust 2021",
+          "EN":"31 august 2021"
+        }
+      },
+      {
+        "pic":"news4.png",
+        "name":{
+          "TM":"Salam bu turkmenche yagdayy",
+          "RU":"Zdrasdi eto ruski variant",
+          "EN":"Hello eto english variant"
+        },
+        "title":{
+          "TM":"Bu turkmenche title",
+          "RU":"Bu Ruscha title",
+          "EN":"Bu Englishche title"
+        },
+        "date": {
+          "RU":"31 августа 2021",
+          "TM":"31 awgust 2021",
+          "EN":"31 august 2021"
+        }
+      }
+    ]
+  }

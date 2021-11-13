@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
+</head>
+
+<body>
+    <%- include ('../admin.ejs') %>
+    <div class="adminContainer">
+        <div class="main">
+            <div class="pageHeader">
+                <%= name %>
+            </div>
+            <div class="addKategori">
+                Kategoriýa goşmak
+                <img src="/pictures/icon/plus.svg" alt="plus">
+            </div>
+        </div>
+    <form action="/admin/kompaniyalar" method="POST" id="identifier">
+        <div class="adminTable">
+                <div class="formInputs addHabar form1">
+                    <div class="box">
+                        <div class="boxHeader">Türkmençe giriziň</div>
+                        <div class="headerCon">
+                            <label class="mazmuny" for="">Address:</label>
+                            <input type="text" name="headerTM" class="header" value="<%= data.headerTM %>">
+                        </div>
+                        <div class="headerCon">
+                            <label class="mazmuny" for="">Mazmunyň headeri:</label>
+                            <input type="text" name="headerTM" class="header" value="<%= data.headerTM %>">
+                        </div>
+                        <div class="mazmun">Mazmuny:</div>
+                        <div class="editorCon">
+                            <div id="editor">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="box imgBox">
+                        <div style="display: flex;">
+                            <div style="width: 60%;">
+                                <div class="headerCon">
+                                    <div class="suratHeader">
+                                        <label for="">Faýl [PDF] giriziň:</label>
+                                        <label for="sowdaSurat">Faýl goşmak <img src="/pictures/icon/plus.svg" alt=""></label>
+                                        <input type="file" onchange="takeImg(event)" id="sowdaSurat" style="display: none;">
+                                    </div>
+                                </div>
+                                <label for="" class="imgsCon">
+                                    <!-- js bilen bir tag gelyar surat yok bolondo default surat gelyan -->
+                                    <div class="imgCon pdfCon">
+                                        <!-- js bilen doldurylyar surat goyulyar -->
+                                    </div>
+                                </label>
+                            </div>
+                            <div style="width: 40%; margin-left:20px; margin-top: 50px;">
+                                <label for="" style="margin-bottom:0;">Logo giriziň:</label>
+                                <label for="logo" class="suratHeader logoPlace">
+                                    <label for="" style="padding-left:5px">Logo</label>
+                                    <label><img src="/pictures/icon/folder.svg" style="width: 15px;" alt=""></label>
+                                    <input type="file" onchange="takeLogo(event)" id="logo" style="display: none;">
+                                </label>
+                            </div>
+                        </div>
+
+                        
+
+                        <div class="headerCon">
+                            <label for="" class="select">
+                                <div>
+                                    Welaýat saýlan:
+                                </div>
+                                <select name="" id="" class="welayatSelect">
+                                    <option value="">Ashgabat</option>
+                                    <option value="">Ahal</option>
+                                    <option value="">Balkan</option>
+                                    <option value="">Lebap</option>
+                                    <option value="">Mary</option>
+                                    <option value="">Daşoguz</option>
+                                </select>
+                            </label>
+                            <label style="margin-top: 4px;" for="" class="select">
+                                <div>
+                                    Kategoriýa saýlaň:
+                                </div>
+                                <select  name="" id="" class="welayatSelect">
+                                    <option value="">Ashgabat</option>
+                                    <option value="">Ahal</option>
+                                    <option value="">Balkan</option>
+                                    <option value="">Lebap</option>
+                                    <option value="">Mary</option>
+                                    <option value="">Daşoguz</option>
+                                </select>
+                            </label>
+                            <label style="margin-top:0;" for="">Web-saýt:</label>
+                            <input type="text">
+                            <label for="">Email:</label>
+                            <input type="email">
+                            <label  for="">Instegram:</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    
+
+                    <textarea name="text" style="display: none;" id="hiddenArea" cols="30"  rows="10"></textarea>
+                    <textarea name="text2" id="hiddenArea2" style="display: none;" cols="30"  rows="10"></textarea>
+                    <textarea name="text3" id="hiddenArea3" cols="30" style="display: none;" rows="10"></textarea>
+
+                    <div class="box">
+                        <div class="boxHeader">Rusça giriziň</div>
+                        <div class="headerCon">
+                            <label class="mazmuny" for="topTa">Address:</label>
+                            <input type="text" name="headerRU" id="topTa" class="header">
+                        </div>
+                        <div class="headerCon">
+                            <label class="mazmuny" for="topTa">Mazmunyň headeri:</label>
+                            <input type="text" name="headerRU" id="topTa" class="header">
+                        </div>
+                        <div class="mazmun">Mazmuny:</div>
+                        <div class="editorCon">
+                            <div id="editor2">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="box">
+                        <div class="boxHeader">Iňlisçe giriziň</div>
+                        <div class="headerCon">
+                            <label class="mazmuny" for="topTa">Address:</label>
+                            <input type="text" name="headerEN" id="topTa" class="header">
+                        </div>
+                        <div class="headerCon">
+                            <label class="mazmuny" for="topTa">Mazmunyň headeri:</label>
+                            <input type="text" name="headerEN" id="topTa" class="header">
+                        </div>
+                        <div class="mazmun">Mazmuny:</div>
+                        <div class="editorCon">
+                            <div id="editor3">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="formInputs addHabar form2">
+
+                </div>
+
+
+            <div class="submitCon">
+                <input class="save" type="submit" value="Ýatda sakla">
+            </div>
+        </div>
+    </form>
+    </div>
+
+    <div class="val" style="display: none;"><%= data.text %></div>
+    <div class="val2" style="display: none;"><%=data.text2%></div>
+    <div class="val3" style="display: none;"><%=data.text3%></div>
+
+
+    <div class="bg" style="display: none;"></div>
+    <div class="kategoriPopup" style="display: none;">
+        <div class="head">Täze giriziljek katigoriýanyň adyny giriziň </div>
+        <form action="/internetKategori" method="POST" class="kategori">
+            <label for="tm">Turkmen</label>
+            <input autocomplete="off" type="text" name="tm" id="tm">
+            <label for="ru">Rusça</label>
+            <input autocomplete="off" type="text" id="ru" name="ru">
+            <label for="en">Iňlisçe</label>
+            <input autocomplete="off" type="text" id="en" name="en">
+            <input type="submit" value="Ýatda sakla">
+        </form>
+    </div>
+
+
+   
+
+
+ <!-- picture show when i choose from file -->
+ <script>
+    var imgCount = 0;
+    var delCount = 0;
+    var imgs = [];
+    function takeImg(event){
+        if(event.target.files[0] != undefined){
+            var imgCon = document.querySelector(".imgCon");
+            imgCon.innerHTML += `
+                                <div class="div pdf ${delCount}">
+                                    <img class="img" src="/pictures/icon/pdfRed.png" alt="hjhjhj">
+                                    <div class="imgDelete" onclick="delImg(${delCount})"><img src="/pictures/icon/delete.svg"  alt=""></div>
+                                    <div class="name"></div>
+                                </div>`;
+            
+            var img = document.querySelectorAll(".imgCon .div .name");
+
+            img[imgCount].textContent = event.target.files[0].name;
+            var obj = {
+                id:delCount,
+                event:event.target.files[0]
+            }
+            imgCount+=1;
+            delCount+=1;
+            imgs.push(obj);
+            imgLen();
+        }
+    }
+
+    function delImg(san){
+        var imgCon = document.querySelectorAll(".imgCon .div");
+        for(var i = 0; i<imgs.length; i++){
+            if(imgs[i].id == san){
+                imgs.splice(i,1);
+            }
+        }
+
+        for(var i = 0; i<imgCon.length ; i++){
+            var a = imgCon[i].classList.contains(san);
+            if(a){
+                imgCon[i].remove();
+                break;
+            }
+        }
+        
+        imgCount-=1;
+        imgLen();
+    }
+
+    var bool = false;
+    function imgLen(){
+        if(imgs.length==0){
+            var imgsCon = document.querySelector(".imgsCon");
+            var imgCon = document.querySelector(".imgCon");
+            imgCon.style.height = "0";
+            var old = imgsCon.innerHTML;
+            imgsCon.innerHTML = `<div class="noneImg" style="height:100px">
+                                    <img style="filter: invert(1); opacity:0.7; width:30px" src="/pictures/icon/pdf.svg" alt="">
+                                </div>`+old;
+            bool = true;
+        }else if(imgs.length == 1 && bool){
+            var imgNone = document.querySelector(".noneImg");
+            imgNone.remove();
+            var imgCon = document.querySelector(".imgCon");
+            imgCon.style.height = "100px";
+            bool = false;
+        }
+    }
+    imgLen();
+
+    var logo;
+    function takeLogo(e){
+        logo = e.target.files[0]
+        var logoLabel = document.querySelector(".logoPlace label");
+        logoLabel.textContent = e.target.files[0].name;
+    }
+
+    var submit = document.querySelector(".save");
+    submit.addEventListener("click",async function(e){
+        var data = new FormData();
+        data.append('img0',logo);
+        for(var i = 1; i<=imgs.length; i++){
+            data.append(`img${i}`,imgs[i-1].event)
+        }
+        const option = {
+            method : "POST",
+            body : data
+        }
+        await fetch('/picture/admin/kompaniyalar',option)
+        
+    })
+</script>
+
+ 
+    <script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
+ 
+    <!-- Initialize Quill editor  3sany text area hidden inpuda hem salyar-->
+    <script>
+        
+      var editor = new Quill('#editor', {
+        modules: { },
+        theme: 'snow'
+      });
+      var editor = new Quill('#editor2', {
+        modules: { },
+        theme: 'snow'
+      });
+      var editor = new Quill('#editor3', {
+        modules: { },
+        theme: 'snow'
+      });
+
+    //   3 sany textarea girizilen maglumatlary hidden textarea girizyar
+    
+    var idForm = document.querySelector("#identifier");
+    idForm.addEventListener("submit",function(){
+        var hiddenText = document.querySelectorAll("#hiddenArea");
+        var hiddenText2 = document.querySelectorAll("#hiddenArea2");
+        var hiddenText3 = document.querySelectorAll("#hiddenArea3");
+        var text = document.querySelectorAll("#editor .ql-editor");
+        var text2 = document.querySelectorAll("#editor2 .ql-editor");
+        var text3 = document.querySelectorAll("#editor3 .ql-editor");
+        for(var i = 0; i<hiddenText.length; i++){
+            hiddenText[i].value = text[i].innerHTML;
+            hiddenText2[i].value = text2[i].innerHTML;
+            hiddenText3[i].value = text3[i].innerHTML;
+        }
+    })
+    </script> 
+
+    <script>
+        var text = document.querySelector("#editor .ql-editor");
+        var text2 = document.querySelector("#editor2 .ql-editor");
+        var text3 = document.querySelector("#editor3 .ql-editor");
+
+        var editText = document.querySelector(".val")
+        var editText2 = document.querySelector(".val2")
+        var editText3 = document.querySelector(".val3")
+
+        text.innerHTML = editText.textContent;
+        text2.innerHTML = editText2.textContent;
+        text3.innerHTML = editText3.textContent;
+    </script>
+
+
+<script>
+    popup();
+</script>
+
+</body>
+</html>
+
+

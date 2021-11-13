@@ -1,0 +1,86 @@
+@import '../color';
+
+@mixin center($justify:center, $align:center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+
+.nav2{
+    background: $blue;
+    width: 100%;
+    height: 60px;
+    color: white;
+    position: relative;
+    margin-top: 30px;
+    @include center(center,center);
+    .nagysh{
+        background:url('/pictures/logo/nagysh.png');
+        height: 60px;
+        min-width: 100%;
+        opacity: 0.05;
+        position: absolute;
+        left: 0;
+        top:0;
+    }
+    .con{
+        @include center(space-between, center);
+        height: 60px;
+        width: 95%;
+        max-width: 1420px;
+        // margin: 0px auto 0;
+        position: absolute;
+        top: 0;
+        z-index: 10;
+        .left{
+            display: flex;
+            @include tablet{
+                display: none;
+            }
+            @include mobile{
+                display: none;
+            }
+            a{
+                text-decoration: none;
+                color: white;
+            }
+            div{
+                margin-right: 20px;
+                cursor: pointer;
+                padding: 3px 5px 5px 5px;
+                transition: 0.3s;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                &:hover{
+                    background: rgba(243, 243, 242, 0.2);
+                }
+            }
+            .active{
+                background: rgba(243, 243, 242, 0.2);
+            }
+            #businessPlan{
+                border: 1px solid white;
+                padding: 3px 5px 5px 5px;
+                border-radius: 5px;
+            }
+        }
+        .right{
+            @include center(center, center);
+            .dots{
+                @include center(center, center);
+                width: 35px;
+                margin-right: 10px;
+                img{
+                    width: 100%;
+                }
+            }
+            div{
+                cursor: pointer;
+            }
+        }
+    }
+    
+    
+}

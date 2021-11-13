@@ -1,0 +1,284 @@
+@import "../../src/color";
+
+.NavbarSection{
+    margin-top: 40px;
+    .container{
+        hr{
+            opacity: 30%;
+            border-top:2px solid #999999;
+        }
+        .header{
+            font-size: 26px;
+            font-weight: bold;
+        }
+        .lineTop{
+            font-weight: 600;
+            display: flex;
+            margin-top:30px;
+            border-bottom: 2px solid rgba(153, 153, 153, 0.3);
+            a{
+                text-decoration: none;
+                color: black;
+            }
+            div,a{
+                padding:5px;
+                margin-right: 20px;
+                text-align: center;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                span{
+                    width: 0;
+                    height: 50px;
+                    border-bottom: 2px solid $blue;
+                    position: absolute;
+                    left: 0;
+                    transition: 0.5s;
+                }
+                &:hover span{
+                    width: 100%;
+                }
+            }
+            .active{
+                display: flex;
+                align-items: center;
+                height: 38px;
+                color: black;
+                border-bottom: 2px solid $blue;
+                margin-bottom: -2px;
+            }
+        }
+        .teg{
+            display: flex;
+            flex-wrap: wrap;
+            div{
+                margin-top: 20px;
+                margin-right: 30px;
+                a{
+                    text-decoration: none;
+                    color: $black;
+                }
+            }
+            .title{
+                font-weight: 600;
+            }
+            .dots{
+                color: $black;
+                @include center();
+                cursor: pointer;
+                
+                div{
+                    width: 4px;
+                    height: 4px;
+                    border-radius: 50%;
+                    background: #2E3A59;
+                    margin-right: 2px;
+                    margin-top: 5px;
+                }
+            }
+        }
+        .teg2{
+            margin-left:65px;
+            @include tablet{
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.newsSection{
+    margin-top: 50px;
+    .container{
+        hr{
+            @include tablet{
+                display: none;
+            }
+        }
+        .header{
+            font-size: 26px;
+            font-weight: 600;
+            color: $black;
+        }
+        .fullLeft0{
+            display: flex;
+            @include tablet{
+                flex-direction: column;
+                margin-bottom: 50px;
+            }
+            @include mobile{
+                margin-bottom: 0;
+            }
+        }
+        .fullLeft{
+            width: 65%;
+            @include tablet{
+                width: 100%;
+            }
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+            "left left"
+            "right right"
+            "lowNews1 lowNews2";
+            grid-gap:30px;
+            margin-top: 30px;
+            @include mobile{
+                grid-template-areas: 
+                "left left"
+                "right right"
+                "lowNews1 lowNews1"
+                "lowNews2 lowNews2";
+            }
+            .right{
+                flex-direction: row;
+                align-items: flex-end;
+                padding: 0 20px;
+                margin-top: -20px;
+                @include mobile{
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding-left: 0;
+                }
+                .top{
+                    width: 60%;
+                    @include mobile{
+                        width: 100%;
+                    }
+                }
+                .title{
+                    display: none;
+                    @include mobile{
+                        display: block;
+                        margin-top: 10px;
+                    }
+                }
+                .name{
+                    font-size: 16px;
+                    font-weight: 600;
+                    @include mobile{
+                        font-size: 24px;
+                        
+                    }
+                }
+            }
+        }
+        .extraNews{
+            width: 35%;
+            padding-left: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            @include tablet{
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100%;
+                padding-left: 0;
+            }
+            @include mobile{
+                margin-top:30px;
+            }
+            .last{
+                border-bottom: none;
+                @include tablet{
+                    border-bottom: 2px solid rgba(153, 153, 153, 0.3);
+                    padding-bottom: 20px;
+                    padding-bottom: 0;
+                }
+                @include mobile{
+                    padding-bottom: 15px;
+                }
+            }
+            .bottomLast{
+                bottom: 0;
+                @include tablet{
+                    bottom: 15px;
+                }
+            }
+            &Container{
+                position: relative;
+                display: flex;
+                align-items: center;
+                border-bottom: 2px solid rgba(153, 153, 153, 0.3);
+                padding-bottom: 20px;
+                @include tablet{
+                    width: 50%;
+                }
+                @include mobile{
+                    width: 100%;
+                    margin-bottom: 30px;
+                    @include center(center,flex-start);
+                    flex-direction: column;
+                    border-bottom: none;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .top{
+                    display: none;
+                    @include mobile{
+                        display: block;
+                        width: 100%;
+                    }
+                }
+                .bottomTop{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    margin-top: 30px;
+                    @include mobile{
+                        margin-top: 15px;
+                    }
+                    .name{
+                        font-weight: 600;
+                        margin-bottom: 30px;
+                        color: $black;
+                    }
+                }
+                .bottom{
+                    display: flex;
+                    align-items: center;
+                    position: absolute;
+                    bottom: 15px;
+                    .new{
+                        color: $blue;
+                        margin-right: 10px;
+                        font-weight: 600;
+                    }
+                    .dot{
+                        background: $gray;
+                        margin-top: 3px;
+                        width: 7px;
+                        height: 7px;
+                        border-radius: 50px;
+                    }
+                    .date{
+                        margin-left: 10px;
+                        color: $gray;
+                    }
+                }
+            }
+        }
+        #newsSection{
+            margin: 50px 0 100px 0;
+            border: none;
+            border-top:2px solid rgba(153,153,153,0.3);
+        }
+        .splide{
+            img{
+                width: 100%;
+            }
+            .splide__arrows{
+                @include mobile{
+                    display: none;
+                }
+            }
+            .splide__pagination{
+                @include mobile{
+                    display: none;
+                }
+            }
+        }
+    }
+}

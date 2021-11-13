@@ -1,0 +1,492 @@
+.adminTable{
+    margin-left: 305px;
+    table{
+        color: $adminTableColor;
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        margin-top: 20px;
+        tr{
+            border-bottom: 1px solid #717484;
+        }
+        td{
+            padding: 5px 10px;
+            a{
+                text-decoration: none;
+                color: $adminTableColor;
+            }
+        }
+        input[type=checkbox] {
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        font-size: 14px;
+        visibility: hidden;
+        }
+        
+        input[type=checkbox]:after {
+        content: " ";
+        display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $adminWhite;
+        width: 16px;
+        height: 16px;
+        visibility: visible;
+        border: 1px solid #717484;
+        border-radius: 5px;
+        }
+        
+        input[type=checkbox]:checked:after {
+            content: "\2714";
+            font-weight: bold;
+        }
+    }
+    .ql-snow .ql-stroke{
+        stroke: black;
+        color: black;
+    }
+    .ql-snow .ql-fill, .ql-snow .ql-stroke.ql-fill{
+        fill: black;
+    }
+    .ql-snow .ql-picker{
+        display: none;
+    } 
+    .ql-toolbar{
+        border: none;
+        border-bottom: 0.5px solid #717484;
+    }
+    .ql-container.ql-snow{
+        border: none;
+    }
+    .ql-toolbar.ql-snow{
+        padding: 0;
+        span{
+            border-right: 0.5px solid #717484;
+            padding: 5px;
+        }
+        .ql-formats:first-child{
+            display: none;
+        }
+    }
+    .editorCon{
+        background: $adminGray;
+        .ql-editor{
+            min-height: 300px;
+        }
+    }
+    .submitCon{
+        display: flex;
+        flex-direction: column;
+        display: inline-block;
+    }
+    .save{
+        background: #7C7F90;
+        padding: 10px 35px;
+        margin: 15px 0 50px 0;
+        border-radius: 6px;
+        font-size: 20px;
+        box-shadow: 5px 5px 10px  #202020;
+        color: white;
+        border:none;
+        outline: none;
+        cursor: pointer;
+    }
+    .more{
+        background: #7C7F90;
+        padding: 10px 35px;
+        margin-top: 50px;
+        border-radius: 6px;
+        font-size: 20px; 
+        box-shadow: 5px 5px 10px  #202020;
+        color: white;
+        border:none;
+        outline: none;
+        cursor: pointer;
+    }
+}
+.addKategori{
+    background: #585962;
+    border-radius: 5px;
+    padding:5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    img{
+        width: 10px;
+        margin-left: 5px;
+    }
+}
+.element{
+    background: $adminGray;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    img{
+        cursor: pointer;
+    }
+}
+.kategoriPopup2{
+    height: auto;
+    max-height: 500px !important;
+    overflow-y: hidden;
+    overflow-y: auto;
+}
+.addHabar{
+
+    @include center(space-between,flex-start);
+    flex-wrap: wrap;
+    .box{
+        width: 48%;
+        margin-top: 50px;
+        font-size: 14px;
+        .welayatSelect{
+            width: 60%;
+            // margin-right: 0px;
+            background: $adminGray;
+            color: inherit;
+            border: none;
+            outline: none;
+            padding: 4px 10px;
+            margin-bottom: 17px;
+            font-size: 14px;
+        }
+        .select{
+            width: 100%;
+            div{
+                min-width: 40%;
+                max-width: 40%;
+                float: left;
+            }
+        }
+        .boxHeader{
+            font-size: 25px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        .headerCon{
+            display: flex;
+            flex-direction: column;
+            label{
+                margin: 22px 0 10px;
+            }
+            input{
+                height: 21px;
+                outline: none;
+                border: none;
+                background: $adminGray;
+                color: $adminWhite;
+                padding:3px 10px;
+            }
+        }
+        .mazmun{
+            margin-top: 30px;
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        .editorCon{
+            margin-top: 10px;
+        }
+    }
+    .imgBox{
+        height: 100%;
+        .imgsCon{
+            width: 100%;
+            .noneImg{
+                background: $adminGray;
+                height: 190px;
+                @include center();
+                img{
+                    width: 25px;
+                }
+            }
+            .pdfCon{
+                justify-content: flex-start !important;
+            }
+            .imgCon{
+                overflow-y: auto;
+                width: 100%;
+                height: 200px;
+                background: $adminGray;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                padding: 10px;
+                padding-bottom: 0;
+                box-sizing: border-box;
+                .pdf{
+                    width: 80px !important;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-right: 10px;
+                    img{
+                        width: 40px
+                    }
+                    .imgDelete{
+                        right: 15px;
+                    }
+                    .name{
+                        font-size: 10px;
+                        max-width: 100%;
+                        text-align: center;
+                    }
+                }
+                div{
+                    max-width: 48%;
+                    margin-bottom: 10px;
+                    position: relative;
+                    img{max-width: 100%; border-radius: 5px;}
+                    .imgDelete{
+                        position: absolute;
+                        top: -5px;
+                        right: -5px;
+                        background: #C4C4C4;
+                        padding:3px;
+                        border-radius: 50px;
+                        width: 12px;
+                        height: 12px;
+
+                        @include center();
+                        cursor: pointer;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .inputs{
+            background: $adminGray;
+            margin-top: 10px;
+            .imgLbCon{
+                width: 100%;
+                height: 335px;
+                @include center();
+                cursor: pointer;
+                img{
+                    object-fit: contain;
+                }
+            }
+        }
+        .suratHeader{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            img{
+                width: 10px;
+            }
+            label:nth-child(2){
+                background: #585962;
+                border-radius: 5px;
+                padding: 3px 5px;
+                cursor: pointer;
+            }
+        }
+        .logoPlace{
+            background: $adminGray !important;
+            margin-top: 10px !important;
+            label{
+                margin: 0;
+            }
+        }
+        .extraInputs{
+            margin-top: 15px;
+            @include center(flex-start);
+            flex-wrap: wrap;
+            .pdf{
+                display: inline-block;
+                font-size: 14px;
+                margin-right: 20px;
+                label{
+                    @include center(space-between);
+                    padding: 5px;
+                    background: #585962;
+                    cursor: pointer;
+                    margin-top: 10px;
+                    .text{
+                        margin-right: 15px;
+                        font-size: 12px;
+                    }
+                }
+            }
+            .choseTeg{
+                margin-right: 30px;
+                .head{
+                    @include center(space-between);
+                    margin-bottom: 8px;
+                    div{
+                        @include center();
+                        padding:5px 4px;
+                        background: $adminGray;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+                input{
+                    background: $adminGray;
+                    border:none;
+                    color: $adminWhite;
+                    outline: none;
+                    padding:3px 7px;
+                    height: 20px;
+                }
+                .dropdown {
+                    position: relative;
+                    display: inline-block;
+                    min-width: 175px;
+                    color: $adminWhite;
+                    .dropbtn {
+                        background-color: $adminGray;
+                        color: #717484;
+                        padding: 6px 5px;
+                        font-size: 16px;
+                        border: none;
+                        cursor: pointer;
+                    }
+                
+                    .dropdown-content {
+                        display: none;
+                        background: $adminGray;
+                        position: absolute;
+                        min-width: 175px;
+                        overflow: auto;
+                        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                        z-index: 1;
+                        div {
+                          background-color: #7C7F90;
+                          color: black;
+                          padding: 3px 7px;
+                          text-decoration: none;
+                          display: block;
+                          color: $adminWhite;
+                          margin-top: 5px;
+                          cursor: pointer;
+                        }
+                    }
+                    .show {display: block;}
+                }
+            }
+            .date{
+                margin-right: 30px;
+                .name2{
+                    width: 160px;
+                }
+                input{
+                    width: 120px;
+                    margin-top: 10px;
+                    background: $adminGray;
+                    padding: 7px 5px 5px;
+                    color: $adminWhite;
+                    border:none;
+                    font-size: 12px;
+                    cursor: pointer;
+                    outline: none;
+                }
+                input[type="date"]::-webkit-calendar-picker-indicator {
+                    cursor: pointer;
+                    filter: invert(1);
+                  }
+            }
+            .bil{
+                margin-top: 15px;
+            }
+            .ishjen{
+                height: 100%;
+                height: 58px;
+                .head{
+                    margin-bottom: 13px;
+                }
+                input[type=checkbox] {
+                    width: 16px;
+                    height: 16px;
+                    cursor: pointer;
+                    font-size: 14px;
+                    visibility: hidden;
+                    }
+                    
+                    input[type=checkbox]:after {
+                    content: " ";
+                    display: inline-block;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: $adminWhite;
+                    width: 16px;
+                    height: 16px;
+                    visibility: visible;
+                    border: 1px solid #717484;
+                    border-radius: 5px;
+                    }
+                    
+                    input[type=checkbox]:checked:after {
+                        content: "\2714";
+                        font-weight: 100;
+                        font-size: 12px;
+                    }
+            }
+        }
+    }
+}
+
+
+.bg{
+    width: 100%;
+    height: 100vh;
+    background: rgba(145, 145, 145, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.kategoriPopup{
+    background: #363740;
+    position: fixed;
+    z-index: 3;
+    padding: 30px 35px;
+    max-width: 380px;
+    min-width: 380px;
+    top:calc(50% - 213px);
+    left:calc(50% - 190px);
+    box-sizing: border-box;
+    .head{
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 28px;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        label{
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        input{
+            background: #585962;
+            outline: none;
+            border: none;
+            color: inherit;
+            padding: 3px 5px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            
+        }
+        input[type="submit"]{
+            color: inherit;
+            padding: 8px 40px;
+            width: 200px;
+            font-size: 18px;
+            margin: 10px auto 0;
+            border-radius: 6px;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Include Quill stylesheet -->
+<link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
+ 
+<!-- Create the toolbar container -->
+<div id="toolbar">
+  <button class="ql-bold">Bold</button>
+  <button class="ql-italic">Italic</button>
+</div>
+ 
+<!-- Create the editor container -->
+<div id="editor">
+  <p>Hello World!</p>
+</div>
+<button class="ok">Ok</button>
+ 
+<!-- Include the Quill library -->
+<script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
+ 
+<!-- Initialize Quill editor -->
+<script>
+  var editor = new Quill('#editor', {
+    modules: { toolbar: '#toolbar' },
+    theme: 'snow'
+  });
+  var button = document.querySelector(".ok");
+  button.addEventListener("click",function(){
+      var p = document.querySelectorAll("#editor p")
+      for(var i =0 ;i<p.length; i++){
+        console.log(p[i])
+      }
+  })
+</script> 
+    
+</body>
+</html>

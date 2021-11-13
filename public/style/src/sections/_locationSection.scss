@@ -1,0 +1,85 @@
+@import "../color";
+
+
+.locationSection{
+    padding-top:150px;
+    .container{
+        .welayatNames{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            color: $gray;
+            div{
+                display: none;
+                @include mobile{
+                    display: block;
+                }
+            }
+        }
+        .sectionHeader{
+            font-weight: 700;
+            font-size: 26px;
+            padding-bottom:60px;
+        }
+        .location{
+            @include center(space-between,flex-start);
+            .map{
+                width: 70%;
+                fill:#C4C4C4;
+                @include mobile{
+                    display: none;
+                }
+                .tm{
+                    width: 80%;
+                    .active{
+                      fill:#2058D4;
+                    }  
+                }
+                svg{
+                    width: 100%;
+                }
+            }
+            .info{
+                width: 30%;
+                padding: 20px;
+                @include mobile{
+                    width: 100%;
+                    padding-left: 0;
+                }
+                .head{
+                    font-size: 24px;
+                    font-weight: 600;
+                    @include mobile{
+                        display: none;
+                    }
+                }
+                .information{
+                    color: $gray;
+                }
+                .title{
+                    font-weight: 600;
+                    padding: 5px 0;
+                }
+            }
+        }
+        .splide3{
+            margin-top:100px;
+            @include mobile{
+                margin-top: 25px;
+            }
+            img{
+                width: 100%;
+            }
+            .splide__arrows{
+                @include mobile{
+                    display: none;
+                }
+            }
+            .splide__pagination{
+                @include mobile{
+                    display: none;
+                }
+            }
+        }
+    }
+}

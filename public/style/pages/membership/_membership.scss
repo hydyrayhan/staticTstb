@@ -1,0 +1,32 @@
+@import '../../src/color';
+
+.container{
+    .agzalarHeader{
+        font-size: 26px;
+        font-weight: 700;
+        color: $black;
+        margin-top: 50px;
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid rgba(153, 153, 153, 0.3);
+    }
+    .document{
+        font-size: 24px;
+        font-weight: 600;
+        color: $black;
+        margin-bottom: 25px;
+    }
+    .columns{
+        @include center(space-between,flex-start);
+        margin-bottom: 50px;
+        flex-wrap: wrap;
+        .col{
+            width: 100%;
+            margin-bottom: 50px;
+        }
+        .name{
+            font-size: 24px;
+            font-weight: 600;
+        }
+    }
+}

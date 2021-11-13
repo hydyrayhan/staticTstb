@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section class="swkSection">
+        <div class="container swk">
+          <div class="bolumlerHeader">
+            <div class="name" id="swk">Senagat we karhanalar</div>
+            <div class="seeAll" ><a href="/karhana/1?pudak=1" data-content id="seeAll"> Hemmesini gormek</a></div>
+          </div>
+          <div class="karhanalar">
+            <%for(var i = 1; i<loop1+1; i++){%>
+              <%if(i%3 == 0){%>
+                <a href="/karhana/<%=i%>?pudak=1" style="margin-right:0;">
+                  <div class="karhana">
+                    <div class="logoContainer"><img src="/pictures/icon/company1.png" alt=""></div>
+                    <div class="right">
+                      <div class="karhanaName" data-dynamic data-tm="<%-list.karhanalar[i-1].name.TM%>" data-ru="<%-list.karhanalar[i-1].name.RU%>" data-en="<%-list.karhanalar[i-1].name.EN%>"><%=list.karhanalar[i-1].name.RU%></div>
+                      <div><img src="/pictures/outsideIcons/line.png" alt=""></div>
+                    </div>
+                  </div>
+                </a>
+              <%}else{%>
+                <a href="/karhana/<%=i%>?pudak=1">
+                  <div class="karhana">
+                    <div class="logoContainer"><img src="/pictures/icon/company1.png" alt=""> </div>
+                    <div class="right">
+                      <div class="karhanaName" data-dynamic data-tm="<%-list.karhanalar[i-1].name.TM%>" data-ru="<%-list.karhanalar[i-1].name.RU%>" data-en="<%-list.karhanalar[i-1].name.EN%>"><%=list.karhanalar[i-1].name.RU%></div>
+                      <div><img src="/pictures/outsideIcons/line.png" alt=""></div>
+                    </div>
+                  </div>
+                </a>
+            <%}}%>
+          </div>
+          <div class="seeAll" ><a href="/karhana/1?pudak=1" data-content id="seeAll"> Hemmesini gormek</a></div>
+        </div>
+      </section>
+      <script>
+        const karhana = document.querySelectorAll(".karhanalar a");
+        if(karhana.length>3){
+          for(var i = 0; i<4; i++){
+            karhana[i].className+="four"
+          }
+        }
+      </script>
+  </body>
+</html>

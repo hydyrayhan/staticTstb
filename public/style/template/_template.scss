@@ -1,0 +1,139 @@
+.agzalar{
+    .container{
+        .subName{
+            font-size: 26px;
+            font-weight: 700; 
+            margin-bottom: 30px;
+        }
+        .mazmunHeader{
+            font-weight: 600;
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        .imgCon{
+            @include center(space-between);
+            margin-bottom: 30px;
+            @include mobile{
+                flex-direction: column;
+            }
+            div{
+                width: 49%;
+                img{
+                    width: 100%;
+                }
+                @include mobile{
+                    width: 100%;
+                }
+                &:first-child{
+                    img{
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+        .mazmun{
+            margin-bottom: 70px;
+        }
+        .videoCon{
+            width: 100%;
+            video{
+                min-width: 100%;
+                max-width: 100%;
+            }
+            margin-bottom: 30px;
+        }
+        .oneImgCon{
+            width: 100%;
+            margin-bottom: 30px;
+            img{
+                width: 100%;
+            }
+        }
+
+        .templateCards{
+            .card{
+                margin-bottom: 30px;
+                .reverse{
+                    @include mobile{
+                        flex-direction: column-reverse !important;
+                    }
+                    @include tablet{
+                        flex-direction: column-reverse !important;
+                    }
+                }
+                .main{
+                    display: flex;
+                    @include mobile{
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    @include tablet{
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    .img,.imgLeft{
+                        width: 50%;
+                        margin-right: 2%;
+                        @include mobile{
+                            width: 100%;
+                            margin-right: 0;
+                            margin-bottom: 30px;
+                        }
+                        @include tablet{
+                            width: 100%;
+                            margin-right: 0;
+                            margin-bottom: 30px;
+                        }
+
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .imgLeft{
+                        margin-right: 0;
+                        margin-left: 2%;
+                    }
+
+                    .right{
+                        width: 48%;
+                        @include mobile{
+                            width: 100%;
+                        }
+                        @include tablet{
+                            width: 100%;
+                        }
+                        .place{
+                            font-weight: 700;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .mazmunCon{
+            display: flex;
+            justify-content: space-between;
+            @include mobile{
+                flex-direction: column;
+            }
+            .mazmun{
+                width: 48%;
+                @include mobile{
+                    width: 100%;
+                }
+            }
+        }
+
+        .splide{
+            @include mobile{
+                .splide__pagination{
+                    display: none;
+                }
+                .splide__arrows{
+                    display: none;
+                }
+            }
+        }
+    }
+}

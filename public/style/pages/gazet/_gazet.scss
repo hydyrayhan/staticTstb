@@ -1,0 +1,38 @@
+.gazet{
+    height: 49px !important;
+}
+.gazetlar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    .list{
+        margin-top: 30px;
+        width: 32%;
+        @include mobile{
+            width: 100%;
+        }
+
+        .img{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+        .pdf{
+            .name{
+                margin-top: 20px;
+                margin-bottom: 10px;
+                a{
+                    text-decoration: none;
+                    font-weight: 600;
+                    color: $black;
+                }
+            }
+            .date{
+                color: $gray;
+                font-size: 14px;
+            }
+        }
+    }
+}

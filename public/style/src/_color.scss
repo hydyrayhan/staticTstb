@@ -1,0 +1,42 @@
+
+$black : #10181F;
+$green : #1A9550;
+$blue : #2058D4;
+$gray : #999999;
+$notBlack :#323C44; 
+$almostWhite : #FBFBFB;
+$notWhite : #F3F3F2;
+$adminGray : #585962;
+$adminWhite : #f1f1f1;
+$adminTableColor:#DDE2FF;
+
+$font2:"Segoe UI";
+
+@mixin center($justify:center, $align:center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+};
+
+@mixin  tablet {
+  @media (max-width:1000px) {
+    @content
+  }
+};
+@mixin  mobile {
+  @media (max-width:640px) {
+    @content
+  }
+}
+
+
+@font-face{
+  src:url('/style/font/PTSerif-Bold.ttf');
+  font-family: font1;
+}
+
+@font-face {
+  font-family: mulish;
+  src: url("/style/font/mulish/Mulish-Regular.ttf");
+}
+

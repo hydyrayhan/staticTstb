@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <%- include ('admin.ejs') %>
+    <%- include ('header.ejs') %>
+
+    <div class="adminContainer">
+
+        <div class="adminTable">
+            <table>
+                <tbody>
+                  <tr>
+                    <td>Ady</td>
+                    <td>Täzelikler topary</td>
+                    <td>Çap edilen senesi</td>
+                    <td>Işjeň</td>
+                  </tr>
+                  
+                <% for( let i = 0; i < data.length; i++ ) { %>
+                        <tr>
+                            <td style="max-width: 400px;"><a href="/admin/partniyorlar/edit/<%= data[i].id %>"><%= data[i].ady%></a></td>
+                            <td><%= data[i].topary %> </td>
+                            <td><%= data[i].chapSenesi %> </td>
+                            <% if (data[i].active) { %>
+                                <td style="max-width: 0px;" class="checkbox"><input style="cursor: pointer;" type="checkbox" checked  name="" id=""></td>
+                            <% }else{%>
+                                <td style="max-width: 0px;" class="checkbox"><input style="cursor: pointer;" type="checkbox"  name="" id=""></td>
+                            <%} %>
+                            <td style="width: 20px;"><a href="/admin/partniyorlar/edit/<%= data[i].id %>"><img style="width: 95%;" src="/pictures/icon/edit.svg" alt=""></a></td>
+                            <td style="width: 40px;"><a href="/admin/partniyorlar/delete/<%= data[i].id %>"><img style="width: 30%;" src="/pictures/icon/delete.svg" alt=""></a></td>
+                        </tr>
+                    <% } %>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</body>
+</html>

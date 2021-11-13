@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include ('../src/header.ejs') %>
+
+    <section class="login">
+        <div class="container">
+            <div class="header">Login</div>
+            <div class="title">Войдите и начните управлять своими кандидатами!</div>
+            <form action="/login" method="post">
+                <input type="text" placeholder="Login" name="login">
+                <div class="password">
+                    <input type="password" placeholder="Password" name="password">
+                    <div class="eye"><img src="/pictures/icon/eye.svg" alt=""></div>
+                </div>
+                <div class="forget"><a href="">Забыл пароль?</a></div>
+                <input type="submit" value="Войти">
+                <div class="error">Bir yalnyshlyk bar!!!</div>
+            </form>
+        </div>
+    </section>
+
+    <%- include ('../src/bottom.ejs') %>
+
+    <script>
+        const eye = document.querySelector(".eye");
+        const pass = document.querySelector("input[type='password']");
+        var bool = true;
+        eye.addEventListener("click",function(){
+            if(bool){
+                pass.setAttribute("type","text");
+                bool = !bool;
+            }else{
+                pass.setAttribute("type","password");
+                bool = !bool;
+            }
+        })
+    </script>
+</body>
+</html>

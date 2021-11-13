@@ -1,0 +1,181 @@
+html{
+    scroll-behavior: smooth;
+}
+.business{
+    .agzaDefinition{
+        margin-right: 16px;
+    }
+    .navbar {
+        border: 1px solid $gray;
+        border-radius: 4px;
+        font-size: 14px;
+        width: 200px;
+      }
+      
+      .navbar a {
+        float: left;
+        padding: 6.5px 10px;
+        text-decoration: none;
+        box-sizing: border-box;
+        width: 200px;
+      }
+      
+      .dropdown {
+        float: left;
+        overflow: hidden;
+        width: 100%;
+      }
+      
+      .dropdown .dropbtn {
+        cursor: pointer;
+        border: none;
+        outline: none;
+        padding: 6.5px 10px;
+        font-family: inherit;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        
+        .img{
+            transform: rotate(90deg);
+        }
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 100000;
+      }
+      
+      .dropdown-content a {
+        float: none;
+        color: black;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        word-break: break-word;
+        background: white;
+      }
+      
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+      
+      .show {
+        display: block;
+      }
+}
+
+section.business{
+    padding-bottom: 15px ;
+    .container{
+        .businessOne{
+          margin-bottom: 25px;
+          display: flex;
+          @include mobile{
+            flex-direction: column;
+          }
+          @include tablet{
+            flex-direction: column;
+          }
+            .label{
+                font-weight: 700;
+                font-size: 16px;
+                color: $notBlack;
+                word-break: break-word;
+            }
+            .infoLabel{
+                color: $notBlack;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            .web{
+                color: $blue;
+                margin-top: 10px;
+            }
+        }
+        .kategoriName{
+            font-size: 24px;
+            font-weight: 600;
+            color: $black;
+            margin-bottom: 30px;
+            border-bottom: 2px solid rgba(153, 153, 153, 0.3);
+            padding-bottom: 7px;
+            &:first-child{
+              border:none;
+            }
+        }
+        .picture{
+          max-width: 50%;
+          min-width: 50%;
+          @include mobile{
+            max-width: 100%;
+            min-width: 100%;
+          }
+          @include tablet{
+            max-width: 100%;
+            min-width: 100%;
+          }
+            margin-right: 25px;
+            border-radius: 4px;
+              .container {
+                position: relative;
+                width: 100%;
+              }
+              
+              .mySlides {
+                display: none;
+              }
+              
+              .cursor {
+                cursor: pointer;
+              }
+              
+              .caption-container {
+                text-align: center;
+                background-color: #222;
+                padding: 2px 16px;
+                color: white;
+              }
+              
+              
+              .row{
+                  display: flex;
+                  justify-content: space-between;
+                  .column{
+                      width: 100%;
+                      margin-right: 10px;
+                      img{
+                        border-radius: 4px;
+                        min-height: 100px;
+                        max-height: 100px;
+                        width: 100%;
+                        object-fit: cover;
+
+                      }
+                      &:last-child{
+                        margin-right: 0px;
+                      }
+                  }
+              }
+              
+              .demo {
+                opacity: 0.6;
+              }
+              
+              .active,
+              .demo:hover {
+                opacity: 1;
+              }
+        }
+        .infoCon{
+          @include mobile{
+            margin-top: 20px;
+          }
+          @include tablet{
+            margin-top: 20px;
+          }
+        }
+    }
+}

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #dde2ff;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    </div>
+    
+    <div class="adminContainer">
+        <div class="sidenav">
+            <div class="adminHeader">TSTB</div>
+
+
+            <button class="dropdown-btn">
+                <div class="iconCon">
+                    <svg width="16" height="15" viewB ox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.6422 1H3.87274C2.28872 1 1 2.28872 1 3.87274V14.1541C1 14.4046 1.20308 14.6077 1.4536 14.6077H10.8278C11.0783 14.6077 11.2814 14.4046 11.2814 14.1541V8.25746H14.4565C14.707 8.25746 14.9101 8.05438 14.9101 7.80386V3.26797C14.9101 2.01742 13.8927 1 12.6422 1ZM10.3742 3.26797C10.3742 3.39971 10.3742 13.201 10.3742 13.7005H1.90717V3.87274C1.90717 2.78892 2.78892 1.90717 3.87274 1.90717H10.829C10.5436 2.28652 10.3742 2.75778 10.3742 3.26797ZM14.0029 7.35026H11.2814C11.2814 7.02212 11.2814 6.77133 11.2814 6.44197H12.6105C12.861 6.44197 13.0641 6.23889 13.0641 5.98837C13.0641 5.73786 12.8611 5.53477 12.6105 5.53477H11.2814V4.6276H12.6105C12.861 4.6276 13.0641 4.42452 13.0641 4.174C13.0641 3.92349 12.8611 3.7204 12.6105 3.7204H11.2814V3.26797C11.2814 2.51764 11.8918 1.9072 12.6422 1.9072C13.3925 1.9072 14.0029 2.51764 14.0029 3.26797V7.35026Z" fill="#60626E"/>
+                        <path d="M5.0823 3.72154H3.26793C3.01744 3.72154 2.81433 3.92462 2.81433 4.17514V7.80386C2.81433 8.05435 3.01741 8.25746 3.26793 8.25746H5.0823C5.33279 8.25746 5.5359 8.05438 5.5359 7.80386V4.17514C5.5359 3.92462 5.33279 3.72154 5.0823 3.72154ZM4.6287 7.35026H3.72153V4.62871H4.6287V7.35026Z" fill="#60626E"  />
+                        <path d="M9.01335 3.72154H6.89659C6.6461 3.72154 6.44299 3.92462 6.44299 4.17514C6.44299 4.42563 6.64608 4.62874 6.89659 4.62874H9.01335C9.26384 4.62874 9.46695 4.42566 9.46695 4.17514C9.46692 3.92462 9.26384 3.72154 9.01335 3.72154Z" fill="#60626E"  />
+                        <path d="M9.01335 5.53592H6.89659C6.6461 5.53592 6.44299 5.739 6.44299 5.98952C6.44299 6.24004 6.64608 6.44312 6.89659 6.44312H9.01335C9.26384 6.44312 9.46695 6.24004 9.46695 5.98952C9.46695 5.739 9.26384 5.53592 9.01335 5.53592Z" fill="#60626E"  />
+                        <path d="M9.01335 7.35025H6.89659C6.6461 7.35025 6.44299 7.55333 6.44299 7.80385C6.44299 8.05434 6.64608 8.25745 6.89659 8.25745H9.01335C9.26384 8.25745 9.46695 8.05437 9.46695 7.80385C9.46692 7.55336 9.26384 7.35025 9.01335 7.35025Z" fill="#60626E"  />
+                    </svg>          
+                </div>
+                <span>Metbugat merkezi</span>  
+                <div class="close">
+                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.99997 0L0.589966 1.41L5.16997 6L0.589966 10.59L1.99997 12L7.99997 6L1.99997 0Z" fill="#60626E"/>
+                    </svg>
+                </div>
+            </button>
+            <div class="dropdown-container">
+              <a href="/admin/habarlar">-<span>Habarlar</span></a>
+              <a href="/admin/bildirishler">-<span>Bildirishler</span></a>
+              <a href="/admin/rysgal">-<span>Rysgal gazeti</span></a>
+            </div>
+
+
+            <button class="dropdown-btn">
+                <div class="iconCon">
+                    <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.78571 12.8607L6 10.2738L2.21429 12.8607C1.78571 13.1536 1 12.9584 1 12.5191V1.4881C1 1.19524 1.28571 1 1.71429 1H10.2857C10.7143 1 11 1.19524 11 1.4881V12.5191C11 12.9584 10.2143 13.1536 9.78571 12.8607Z" fill="#60626E" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                                
+                </div>
+                <span>Banner</span>  
+                <div class="close">
+                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.99997 0L0.589966 1.41L5.16997 6L0.589966 10.59L1.99997 12L7.99997 6L1.99997 0Z" fill="#60626E"/>
+                    </svg>
+                </div>
+            </button>
+
+
+            <div class="dropdown-container">
+              <a href="/admin/banner1">-<span>Banner 1</span></a>
+              <a href="/admin/banner2">-<span>Banner 2</span></a>
+              <a href="/admin/banner3">-<span>Banner 3</span></a>
+            </div>
+            <button class="dropdown-btn">
+                <div class="iconCon">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.9717 4.50708L6.28333 0.639403C6.06641 0.460368 5.75311 0.460368 5.53611 0.639403L0.847713 4.50708C0.712439 4.61863 0.634155 4.78467 0.634155 4.95995V10.7955C0.634155 11.1198 0.896953 11.3826 1.22128 11.3826H10.598C10.9223 11.3826 11.1851 11.1198 11.1851 10.7955V4.95995C11.1853 4.78467 11.107 4.61863 10.9717 4.50708ZM6.53055 10.2084H5.28897V6.95775H6.53047V10.2084H6.53055ZM10.011 10.2084H7.7048V6.37062C7.7048 6.04629 7.442 5.78349 7.11768 5.78349H4.70185C4.37752 5.78349 4.11472 6.04629 4.11472 6.37062V10.2084H1.80849V5.23676L5.90976 1.85342L10.011 5.23676V10.2084Z" fill="#60626E"/>
+                    </svg>
+                </div>
+                <span>Bash sahypa</span>  
+                <div class="close">
+                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.99997 0L0.589966 1.41L5.16997 6L0.589966 10.59L1.99997 12L7.99997 6L1.99997 0Z" fill="#60626E"/>
+                    </svg>
+                </div>
+            </button>
+            <div class="dropdown-container">
+              <a href="/admin/tstb">-<span>TSTB</span></a>
+              <a href="/admin/kompaniyalar">-<span>TSTB agzalary</span></a>
+              <a href="/admin/agzalyk">-<span>Agzalyk</span></a>
+              <a href="/admin/internetSowda">-<span>Internet söwda</span></a>
+              <a href="/admin/plans">-<span>Iş meýilnamasy</span></a>
+              <a href="/admin/ygtyyarnama">-<span>Ygtyýarnama</span></a>
+              <a href="/admin/maslahat">-<span>Maslahat</span></a>
+            </div>
+
+
+            <a href="/admin/pudaklar" class="yeke">
+                <div class="iconCon" style="margin-right: 15px;">
+                    <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 6.57143C15 6.32516 14.8946 6.08897 14.7071 5.91483C14.5196 5.74069 14.2652 5.64286 14 5.64286H11V1.92857C11 1.6823 10.8946 1.44611 10.7071 1.27197C10.5196 1.09783 10.2652 1 10 1H2C1.73478 1 1.48043 1.09783 1.29289 1.27197C1.10536 1.44611 1 1.6823 1 1.92857V14H15V6.57143ZM2 1.92857H10V13.0714H2V1.92857ZM11 13.0714V6.57143H14V13.0714H11Z" fill="#60626E" />
+                    </svg>       
+                </div>
+                <span>Pudaklar we karhanalar</span>
+            </a>
+
+            
+            <a href="/admin/kompaniyalar" class="yeke">
+                <div class="iconCon" style="margin-right: 15px;">
+                    <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 6.57143C15 6.32516 14.8946 6.08897 14.7071 5.91483C14.5196 5.74069 14.2652 5.64286 14 5.64286H11V1.92857C11 1.6823 10.8946 1.44611 10.7071 1.27197C10.5196 1.09783 10.2652 1 10 1H2C1.73478 1 1.48043 1.09783 1.29289 1.27197C1.10536 1.44611 1 1.6823 1 1.92857V14H15V6.57143ZM2 1.92857H10V13.0714H2V1.92857ZM11 13.0714V6.57143H14V13.0714H11Z" fill="#60626E" />
+                    </svg>       
+                </div>
+                <span>Kompaniýalar</span>
+            </a>
+           
+            <a href="/admin/partniyorlar" class="yeke">
+                <div class="iconCon" style="margin-right: 15px;">
+                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.87891 2.37891C8.87891 3.4166 8.03769 4.25781 7 4.25781C5.96231 4.25781 5.12109 3.4166 5.12109 2.37891C5.12109 1.34121 5.96231 0.5 7 0.5C8.03769 0.5 8.87891 1.34121 8.87891 2.37891Z" fill="#60626E"/>
+                        <path d="M12.8164 3.25388C12.8164 3.80832 12.3669 4.25778 11.8125 4.25778C11.2581 4.25778 10.8086 3.80832 10.8086 3.25388C10.8086 2.69943 11.2581 2.24997 11.8125 2.24997C12.3669 2.24997 12.8164 2.69943 12.8164 3.25388Z" fill="#60626E"/>
+                        <path d="M3.19141 3.25388C3.19141 3.80832 2.74194 4.25778 2.1875 4.25778C1.63306 4.25778 1.18359 3.80832 1.18359 3.25388C1.18359 2.69943 1.63306 2.24997 2.1875 2.24997C2.74194 2.24997 3.19141 2.69943 3.19141 3.25388Z" fill="#60626E"/>
+                        <path d="M1.85664 6.18748C1.93161 6.18748 2.00236 6.18705 2.06942 6.18665C2.41918 6.18454 2.66845 6.18304 2.89218 6.24568C1.92293 7.53706 1.94954 8.93502 1.9783 10.4463C1.98069 10.5716 1.98309 10.6976 1.98493 10.8245C1.94444 10.8243 1.90052 10.824 1.85288 10.8237C1.61206 10.8223 1.27589 10.8203 0.80418 10.8203C0.635031 10.8203 0.5 10.6831 0.5 10.5191V7.5329C0.5 6.79442 1.10619 6.18748 1.85664 6.18748Z" fill="#60626E"/>
+                        <path d="M7.60957 6.1967L7.63032 6.19843H7.65113C8.17293 6.19843 8.81247 6.46619 9.32845 6.97367C9.83643 7.47328 10.1915 8.17373 10.1915 8.99663C10.1915 9.53534 10.1929 9.94899 10.1941 10.2701C10.1955 10.6866 10.1964 10.9474 10.1929 11.1235C10.1898 11.2806 10.1833 11.3337 10.1792 11.3549C10.1791 11.3555 10.179 11.3559 10.1789 11.3564C10.1784 11.3602 10.1779 11.3637 10.1531 11.4203C10.0831 11.5749 10.0588 11.5875 10.0451 11.5946C10.0442 11.5951 10.0434 11.5955 10.0426 11.5959C9.99085 11.6248 9.85199 11.6706 9.44492 11.6945C8.95946 11.723 8.23318 11.7173 7.09013 11.7084C6.34318 11.7025 5.41825 11.6953 4.26625 11.6953C4.01353 11.6953 3.80867 11.4879 3.80867 11.2377C3.80867 10.9253 3.80241 10.6334 3.79649 10.3577C3.78255 9.70832 3.77053 9.1482 3.84675 8.61817C3.94799 7.91416 4.2015 7.33519 4.83259 6.82969L4.83262 6.82974L4.83829 6.82506C5.58364 6.20983 6.45987 6.10081 7.60957 6.1967Z" fill="#60626E"/>
+                        <path d="M12.021 10.4208C12.048 8.85639 12.0711 7.5168 11.1093 6.24521C11.3322 6.18316 11.5812 6.18462 11.9318 6.18667C11.9985 6.18706 12.0689 6.18747 12.1434 6.18747C12.8939 6.18747 13.5001 6.79441 13.5001 7.5329V10.4907C13.5001 10.6702 13.3522 10.8203 13.1672 10.8203C12.7085 10.8203 12.3811 10.8224 12.1459 10.8239C12.0985 10.8242 12.0549 10.8244 12.0147 10.8247C12.0164 10.6884 12.0188 10.5538 12.021 10.4208Z" fill="#60626E"/>
+                    </svg>       
+                </div>
+                <span>Partniýorlar</span>
+            </a>
+           
+
+
+            <button class="dropdown-btn">
+                <div class="iconCon">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 1C3.6916 1 1 3.31809 1 6.16742C1 7.84643 1.92799 9.39582 3.49807 10.3658C3.28023 11.4366 2.79205 12.188 2.7867 12.1961L2.253 13L3.17867 12.8752C3.2853 12.8608 5.76871 12.5147 7.53877 11.3141C8.99236 11.2028 10.3424 10.6421 11.3511 9.72848C12.4144 8.76526 13 7.50062 13 6.16748C13 3.31809 10.3084 1 7 1ZM7.37919 10.454L7.26627 10.4608L7.17237 10.5271C6.14305 11.2542 4.76506 11.6576 3.89819 11.8548C4.08004 11.4274 4.27115 10.8591 4.36654 10.2031L4.41112 9.89641L4.14986 9.75241C2.69512 8.9508 1.82659 7.61071 1.82659 6.16742C1.82659 3.79741 4.14738 1.86917 7 1.86917C9.85262 1.86917 12.1734 3.79735 12.1734 6.16742C12.1734 8.40884 10.0675 10.2917 7.37919 10.454Z" fill="#60626E" />
+                    </svg>
+                </div>
+                <span>Constructor</span>  
+                <div class="close">
+                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.99997 0L0.589966 1.41L5.16997 6L0.589966 10.59L1.99997 12L7.99997 6L1.99997 0Z" fill="#60626E"/>
+                    </svg>
+                </div>
+            </button>
+            <div class="dropdown-container">
+              <a href="#">-<span>Habarlar</span></a>
+              <a href="#">-<span>Bildirishler</span></a>
+              <a href="#">-<span>Rysgal gazeti</span></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="/scripts/sendData.js"></script>
+
+    <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+  
+    </script>
+
+
+<script>
+        function popup(){
+            var bg = document.querySelector(".bg");
+            var katPop = document.querySelector(".kategoriPopup");
+            var addKat = document.querySelector(".addKategori");
+    
+            addKat.addEventListener("click",function(){
+                bg.style.display = "block";
+                katPop.style.display = "block";
+            })
+            bg.addEventListener("click",function(){
+                bg.style.display = "none";
+                katPop.style.display = "none";
+            })
+        }
+
+        function popup2(){
+            var bg = document.querySelector(".bg2");
+            var katPop = document.querySelector(".kategoriPopup2");
+            var addKat = document.querySelector(".addKategori2");
+            var element = document.querySelectorAll(".element img");
+
+            for(var i = 0; i<element.length; i++){
+                element[i].addEventListener("click",async function(){
+                    var tegName = this.parentNode.textContent;
+                    this.parentNode.style.display = "none";
+                    
+                    var a = {b:tegName}
+                    const option = {
+                        method : "POST",
+                        headers: {"Accept":"application/json","Content-type":"application/json"},
+                        body:JSON.stringify({teg:tegName})
+                    }
+
+                    await fetch("/tegDel",option);
+                })
+            }
+    
+            addKat.addEventListener("click",function(){
+                bg.style.display = "block";
+                katPop.style.display = "block";
+            })
+            bg.addEventListener("click",function(){
+                bg.style.display = "none";
+                katPop.style.display = "none";
+            })
+        }
+</script>
+
+<!-- active -->
+<script>
+    
+    function dropActive(el,inEl){
+        inEl = inEl*2-1;
+        var a = document.querySelectorAll('.dropdown-btn');
+        var b = document.querySelectorAll(".dropdown-container");
+        // a[el].classList.add("active");
+        a[el].click();
+        b[el].childNodes[inEl].style.color = "white";
+        b[el].childNodes[inEl].style.background = "rgba(159, 162, 180, 0.08)";
+    }
+
+    function linkActive(el){
+        var a = document.querySelectorAll(".yeke")
+        a[el].style.color = "white";
+        a[el].style.background = "rgba(159, 162, 180, 0.08)";
+        a[el].classList.add("active");
+    }
+</script>
+</body>
+</html>

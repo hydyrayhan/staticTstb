@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .adminContainer .main .right a{
+            display: flex;
+            text-decoration: none;
+            color: white;
+            background: #585962;
+            border-radius: 5px;
+            align-items: center;
+        }
+        .adminContainer .main .right a .text{
+            padding: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="adminContainer">
+        <div class="main">
+            <div class="pageHeader"><span><%= name  %></span></div>
+            <div class="right">
+                <a href="/admin/<%= name %>/add"><div class="text">Täze döretmek</div><div class="headerBtn"><img src="/pictures/icon/plus.svg"/></div></a>
+                <div class="headerBtn"><img src="/pictures/icon/login.svg" alt=""></div>
+                <div class="headerBtn"><label for="gozleg" class="iconGozleg"><img src="/pictures/icon/gozleg.svg" alt=""></label><span><input id="gozleg" type="text" placeholder="Gozlemek..."></span></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

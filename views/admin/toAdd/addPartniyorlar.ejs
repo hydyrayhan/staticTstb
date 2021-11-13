@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
+</head>
+
+<body>
+    <%- include ('../admin.ejs') %>
+    <div class="adminContainer">
+        <div class="main">
+            <div class="pageHeader">
+                <%= name %>
+            </div>
+            <div class="addKategori">
+                Kategoriýa goşmak
+                <img src="/pictures/icon/plus.svg" alt="plus">
+            </div>
+        </div>
+    <form action="/admin/partniyorlar" method="POST" id="identifier">
+        <div class="adminTable">
+                <div class="formInputs addHabar form1">
+                    <div class="box imgBox">
+                        <div class="boxHeader">Adyny giriziň</div>
+                        <div class="headerCon">
+                            <label class="mazmuny" for="topTa">Ady:</label>
+                            <input type="text" name="headerRU" id="topTa" class="header">
+                            <label class="mazmuny" for="topTa">Salgylanmasy:</label>
+                            <input type="text" name="headerRU" id="topTa" class="header">
+                        </div>
+                        <div style="display: flex;">
+                            <div style="width: 40%; margin-top: 20px;">
+                                <label for="" style="margin-bottom:0;">Logo giriziň:</label>
+                                <label for="logo" class="suratHeader logoPlace">
+                                    <label for="" style="padding-left:5px">Logo</label>
+                                    <label><img src="/pictures/icon/folder.svg" style="width: 15px;" alt=""></label>
+                                    <input type="file" onchange="takeLogo(event)" id="logo" style="display: none;">
+                                </label>
+                            </div>
+                            <div class="extraInputs">
+                                <div class="ishjen" style="padding-top: 5px; margin-left: 30px;">
+                                    <div class="head" style="margin-bottom: 10px;">Işjeň:</div>
+                                    <input type="checkbox" checked name="habarIshjen" id="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                       
+                    </div>
+                </div>
+                <div class="formInputs addHabar form2">
+
+                </div>
+
+
+            <div class="submitCon">
+                <input class="save" type="submit" value="Ýatda sakla">
+            </div>
+        </div>
+    </form>
+    </div>
+
+   
+
+    <div class="bg" style="display: none;"></div>
+    <div class="kategoriPopup" style="display: none;">
+        <div class="head">Täze giriziljek katigoriýanyň adyny giriziň </div>
+        <form action="/internetKategori" method="POST" class="kategori">
+            <label for="tm">Turkmen</label>
+            <input autocomplete="off" type="text" name="tm" id="tm">
+            <label for="ru">Rusça</label>
+            <input autocomplete="off" type="text" id="ru" name="ru">
+            <label for="en">Iňlisçe</label>
+            <input autocomplete="off" type="text" id="en" name="en">
+            <input type="submit" value="Ýatda sakla">
+        </form>
+    </div>
+
+
+   
+
+
+ <!-- picture show when i choose from file -->
+ <script>
+
+
+
+    var logo;
+    function takeLogo(e){
+        logo = e.target.files[0]
+        var logoLabel = document.querySelector(".logoPlace label");
+        logoLabel.textContent = e.target.files[0].name;
+    }
+
+    var submit = document.querySelector(".save");
+    submit.addEventListener("click",async function(e){
+        var data = new FormData();
+        data.append('img',logo);
+        const option = {
+            method : "POST",
+            body : data
+        }
+        await fetch('/picture/admin/partniyorlar',option)
+        
+    })
+</script>
+
+ 
+
+</body>
+</html>
+
+

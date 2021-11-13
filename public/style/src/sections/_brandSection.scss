@@ -1,0 +1,117 @@
+@import '../color';
+
+.brandSection{
+    .container{
+        .seeAll{
+        color: $blue;
+        display: none;
+        @include mobile{
+            display: block;
+            text-align: end;
+            margin-top: 10px;
+        }
+        }
+        a{
+            color: $blue;
+            text-decoration: none;
+        }
+    }
+    padding-top:100px;
+    @include mobile{
+        padding-top: 25px;
+    }
+    background: $almostWhite;
+    .splide2{
+        .splide__arrow{
+            @include mobile{
+                display: none;
+            }
+        }
+        .splide__pagination{
+            @include mobile{
+                display: none;
+            }
+        }   
+        img{
+            width: 100%;
+        }
+    }
+    .brandHeader{
+        @include center(space-between);
+        padding-top:100px;
+        @include mobile{
+            padding-top: 50px;
+        }
+        padding-bottom:10px;
+        .header{
+            font-size: 26px;
+            font-weight: bold;
+            line-height: 35px;
+        }
+        .seeAll{
+            display: block;
+            @include mobile{
+              display: none;
+            }
+            a{
+              text-decoration: none;
+              color:$blue;
+              font-weight: 400;
+            }
+        }
+    }
+    .brands{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        .margin{
+            margin-right: 0;
+            @include tablet{
+                margin-right: auto;  
+            }
+        }
+        a{
+            width: 32%;
+            margin-right: 2%;
+            text-decoration: none;
+            color: $black;
+            @include tablet{
+                width: 48%;
+            }
+            @include mobile{
+                width: 100%;
+                &:not(.four){
+                  display: none;
+                }
+            }
+        }
+        .brand{
+            background:white;
+            width:100%;
+            border-radius: 5px;
+            padding: 20px;
+            box-sizing: border-box;
+            @include center(space-between);
+            box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.07);
+            margin-top:30px;
+            .left{
+                @include center(flex-start);
+                font-weight: 600;
+                width:90%;  
+                .brandLogo{
+                    @include center();
+                    width: 70px;
+                    height: 70px;
+                    margin-right: 20px;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .arrow{
+                height: 100%;
+            }
+        }
+
+    }
+}

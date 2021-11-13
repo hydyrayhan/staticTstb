@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
+</head>
+
+<body>
+    <%- include ('./admin.ejs') %>
+    <div class="adminContainer">
+        <div class="main">
+            <div class="pageHeader">
+                <%= name %> 
+            </div>
+        </div>
+    <form action="/admin/maslahat" method="POST" id="identifier">
+        <div class="adminTable">
+                <div class="formInputs addHabar form1">
+                    <div class="box">
+                        <div class="boxHeader">Türkmençe giriziň</div>
+                        <div class="headerCon">
+                            <label class="mazmuny" for="">Mazmunyň headeri:</label>
+                            <input type="text" name="headerTM" class="header">
+                        </div>
+                        <div class="mazmun">Mazmuny:</div>
+                        <div class="editorCon">
+                            <div id="editor">
+                                <p></p>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <div class="box imgBox">
+                        <div class="boxHeader">Suraty giriziň</div>
+                        <div class="mazmun">Suraty giriziň:</div>
+                        <div class="inputs">
+                            <p><input type="file"  accept="image/*" name="image" id="img0" onchange="loadFile(event,0)" class="1" style="display: none;"></p>
+                            <label class="imgLbCon" for="img0"><img id="output" src="/pictures/icon/addPicture.svg" /></label>
+                        </div>
+                      
+                    
+    
+                    <textarea name="text" style="display: none;" id="hiddenArea" cols="30"  rows="10"></textarea>
+                    <textarea name="text2" id="hiddenArea2" style="display: none;" cols="30"  rows="10"></textarea>
+                    <textarea name="text3" id="hiddenArea3" cols="30" style="display: none;" rows="10"></textarea>
+                    </div>
+                    <div class="box">
+                        <div class="boxHeader">Rusça giriziň</div>
+                        <div class="headerCon">
+                            <label class="mazmuny" for="topTa">Mazmunyň headeri:</label>
+                            <input type="text" name="headerRU" id="topTa" class="header">
+                        </div>
+                        <div class="mazmun">Mazmuny:</div>
+                        <div class="editorCon">
+                            <div id="editor2">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="boxHeader">Iňlisçe giriziň</div>
+                        <div class="headerCon">
+                            <label class="mazmuny" for="topTa">Mazmunyň headeri:</label>
+                            <input type="text" name="headerEN" id="topTa" class="header">
+                        </div>
+                        <div class="mazmun">Mazmuny:</div>
+                        <div class="editorCon">
+                            <div id="editor3">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="formInputs addHabar form2">
+
+                </div>
+
+
+            <div class="submitCon">
+                <div class="more">Ýene maglumat goşmak</div>
+                <input class="save" type="submit" value="Ýatda sakla">
+            </div>
+
+
+        </div>
+    </form>
+    </div>
+
+
+
+    <!-- picture show when i choose from file and send to node with fetch-->
+    <script>
+        
+        var form = document.querySelector("form .form1")
+        
+        sendImg("/picture/admin/maslahat",form)
+
+    </script>
+ 
+    <script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
+ 
+    <!-- Initialize Quill editor  3sany text area hidden inpuda hem salyar-->
+    <script>
+        
+      var editor = new Quill('#editor', {
+        modules: { },
+        theme: 'snow'
+      });
+      var editor = new Quill('#editor2', {
+        modules: { },
+        theme: 'snow'
+      });
+      var editor = new Quill('#editor3', {
+        modules: { },
+        theme: 'snow'
+      });
+
+    //   3 sany textarea girizilen maglumatlary hidden textarea girizyar
+    
+    var idForm = document.querySelector("#identifier");
+    idForm.addEventListener("submit",function(){
+        var hiddenText = document.querySelectorAll("#hiddenArea");
+        var hiddenText2 = document.querySelectorAll("#hiddenArea2");
+        var hiddenText3 = document.querySelectorAll("#hiddenArea3");
+        var text = document.querySelectorAll("#editor .ql-editor");
+        var text2 = document.querySelectorAll("#editor2 .ql-editor");
+        var text3 = document.querySelectorAll("#editor3 .ql-editor");
+        for(var i = 0; i<hiddenText.length; i++){
+            hiddenText[i].value = text[i].innerHTML;
+            hiddenText2[i].value = text2[i].innerHTML;
+            hiddenText3[i].value = text3[i].innerHTML;
+        }
+    })
+    </script> 
+
+</body>
+</html>
+
+

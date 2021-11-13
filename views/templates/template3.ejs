@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include ('../src/header.ejs') %>
+
+
+    <section class="agzalar" style="background-color: white;">
+        <div class="container">
+            <div class="agzalarHeader">Бизнес-планы</div>
+            <div class="subName">Строительная промышленность</div>
+            <div class="mazmunHeader">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, assumenda!</div>
+            <div class="oneImgCon"><img src="/pictures/news/gul.png" alt=""></div>
+            <div class="mazmun">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo assumenda dolorem cumque iusto laborum ratione voluptates similique accusamus qui eos, libero ab quia quaerat quis hic asperiores distinctio. Eos nemo, voluptatem quas ut dolore itaque suscipit tempore ex, ipsum temporibus, illum aperiam doloribus adipisci perferendis! Consequatur sed, nemo suscipit non quo eaque nisi. Quis tempora optio dolore accusamus ipsa officia obcaecati vero in sequi, ea et? Officia incidunt nostrum in corporis natus sed temporibus voluptate, culpa nesciunt, fugiat non nihil aut, voluptas aspernatur deleniti architecto. Dicta voluptas in error animi, porro blanditiis esse veritatis explicabo possimus sed nemo provident quisquam!</div>
+
+
+            <div class="splide">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide"><a href="/>"><div><img src="/pictures/reklams/kerwen3.png" alt=""></div></a></li>
+                    <li class="splide__slide"><a href="/>"><div><img src="/pictures/reklams/kerwen1.png" alt=""></div></a></li>
+                    <li class="splide__slide"><a href="/>"><div><img src="/pictures/reklams/kerwen2.png" alt=""></div></a></li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <%- include ('../src/bottom.ejs') %>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+              new Splide('.splide',{
+                  type:"loop",
+                  perPage:1,
+                  autoplay:true,
+                  cover:true
+                }).mount();
+            });
+     </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/app.css">
+    <link rel="stylesheet" href="/style/src/materialize/splide.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/">
+                <div class="left">
+                    <div class="logo">
+                        <img src="/pictures/logo/logo.svg" alt="">
+                    </div>
+                    <div class="title" data-content id='title'>Union of Industrialists and entrepreneurs of turkmenistan</div>
+                </div>
+            </a>
+            
+          <div class="right">
+            <div class="language">
+              <div class='chosen-lang' href='#' data-target='dropdown1'></div>
+    
+              <ul id='dropdown1' class='dropdown-content'>
+                <li class="lang-link" data-content id="TM">TM</li>
+                <li class="lang-link" data-content id="EN">EN</li>
+                <li class="lang-link" data-content id="RU">RU</li>
+              </ul>
+            </div>
+            <div class="search">
+              <div class="icon">
+                <img src="/pictures/icon/search.png" alt="">
+              </div>
+              <div class="searchText" data-content id='search'></div>
+            </div>
+            <a href="/login">
+              <div class="login">
+                <div class="loginText" id="login" data-content></div>
+                <div class="icon">
+                  <img src="/pictures/icon/login.png" alt="">
+                </div>
+              </div>
+            </a>
+          </div>
+        </nav>
+      </div>
+    
+    
+      
+      <div class="nav2">
+        <div class="container">
+          
+            <div class="con">
+              <div class="left">
+                <a href="/sppt">
+                  <div data-content id='sppt'>SPPT</div>
+                </a>
+                <a href="/agzalar/-1">
+                  <div data-content id='spptMember'>SPPT Membership</div>
+                </a>
+                <a href="/membership">
+                  <div data-content id='membership'>Membership</div>
+                </a>
+                <a href="/onlineBusiness">
+                  <div data-content id='onlineBusiness'>Online Business</div>
+                </a>
+                <a href="/businessPlans">
+                  <div data-content id='businessPlan'>Business Plans</div>
+                </a>
+                <a href="/licenses">
+                  <div data-content id='licenses'>Licenses</div>
+                </a>
+                <a href="/consultation">
+                  <div data-content id='consultation'>Consultation</div>
+                </a>
+              </div>
+              <div class="right">
+                <div class="dots"><img src="/pictures/icon/dots.png" alt=""></div>
+                <div data-content id="menu"></div>
+              </div>
+            </div>
+            <div class="nagysh"></div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        var size = document.defaultView;
+        if(size.innerWidth <=1000){
+          changeLangPlace();
+        }
+
+        size.addEventListener("resize",function(){
+          if(size.innerWidth <= 1000){
+            changeLangPlace();
+          }else{
+            reChangeLangPlace();
+          }
+        })
+
+        function changeLangPlace(){
+          const lang = document.querySelector(".language");
+          lang.parentNode.removeChild(lang);
+          const nav2 = document.querySelector(".nav2 .container");
+          const left = document.querySelector(".nav2 .left");
+          
+          left.parentNode.insertBefore(lang,left.nextSibling);
+        }
+        function reChangeLangPlace(){
+          const lang = document.querySelector(".language");
+          lang.parentNode.removeChild(lang);
+          const search = document.querySelector(".search");
+          
+          search.parentNode.insertBefore(lang,search);
+        }
+      </script>
+</body>
+</html>

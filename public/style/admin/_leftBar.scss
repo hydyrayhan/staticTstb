@@ -1,0 +1,134 @@
+
+.adminContainer{
+    width: 99%;
+    max-width: 1700px;
+    margin: 0 auto;
+    font-family: mulish;
+    .sidenav {
+      height: 100%;
+      width: 275px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      overflow-x: hidden;
+      padding-top: 20px;
+      button{
+        .iconCon{
+          margin-right: 15px;
+        }
+        img{
+          width: 100%;
+        }
+      }
+    }
+
+
+    .sidenav a, .dropdown-btn {
+      padding: 6px 8px 6px 16px;
+      font-size: 16px;
+      text-decoration: none;
+      color: #60626E;
+      display: block;
+      border: none;
+      background: none;
+      width:100%;
+      text-align: left;
+      cursor: pointer;
+      outline: none;
+      display: flex;
+      padding: 18px;
+      .close{
+          width: 10px;
+          margin-left: 10px;
+      }
+    }
+
+
+    .sidenav a:hover, .dropdown-btn:hover {
+      background: rgba(159, 162, 180, 0.08);
+      color: #DDE2FF;
+      &:hover path{
+          fill: #DDE2FF;
+      }
+    }
+
+
+
+    .active {
+    color: white;
+    border-left: 2px solid $adminWhite;
+    background: rgba(159, 162, 180, 0.08);
+    path{
+        fill:#f1f1f1;
+    }
+    .close{
+        transform: rotate(90deg);
+    }
+    }
+    
+
+    .dropdown-container {
+    display: none;
+    padding-left: 8px;
+    span{
+      margin-left: 10px;
+    }
+    }
+
+
+    .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+    }
+
+
+    .adminHeader{
+        color: #60626E;
+        font-size: 24px;
+        font-weight: 800;
+        margin-left: 20px;
+    }
+    .main{
+      margin-left: 305px;
+      margin-top: 35px;
+      @include center(space-between);
+      .pageHeader{
+          font-size: 30px;
+          font-weight: 800;
+          letter-spacing: 2px;
+      }
+      .right{
+        @include center(space-between);
+        .headerBtn{
+          background: $adminGray;
+          @include center();
+          padding: 6px 12px;
+          border-radius: 5px;
+          margin-left: 20px;
+          font-size: 14px;
+          color: #60626E;
+          span{
+            input{
+              width: 100px;
+              background: none;
+              outline: none;
+              border:none;
+              color: $adminWhite;
+              padding:0;
+            }
+          }
+          .iconGozleg{
+            width: 17px;
+            height: 17px;
+            margin-right: 10px;
+          }
+          img{
+            width: 100%;
+          }
+        }
+      }
+  }
+}
+
+
+

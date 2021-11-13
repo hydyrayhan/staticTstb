@@ -1,0 +1,3 @@
+{
+    "banner_kode":"<%for(var i = 0; i < banner[0].banner.length; i++){%><li class='splide__slide'><div><a href='<%= banner[0].banner[i].link %>' target='_blank'><img src='http://10.192.168.43:5000/banners/<%=banner[0].banner[i].pic%>' alt=''></a></div></li><%}%>"
+}

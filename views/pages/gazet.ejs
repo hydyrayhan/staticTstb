@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include ('../src/header.ejs') %>
+
+
+    <section class="newsSection">
+        <div class="container newsSectionContainer">
+          <div class="navbar">
+            <div class="left1">
+              <a href="/pressCenter">
+                <div class="h1" data-content id="newsCenter">Press Center</div>
+                <div class="img"><img src="/pictures/icon/rightArrow.png" alt=""></div>
+              </a>
+            </div>
+    
+            <div class="right1">
+                <% if (page) { %>
+                    <a href="/<%=page%>"><div class="g1" data-id0 data-content id="news"><span></span> News</div></a>
+                    <a href="/<%=page%>/?sl=2"><div data-id1 data-content class="g1" id="events"><span></span> Events announcements</div></a>
+                <% } else{%>
+                    <a href="/"><div class="g1" data-id0 data-content id="news"><span></span> News</div></a>
+                    <a href="/?sl=2"><div data-id1 data-content class="g1" id="events"><span></span> Events announcements</div></a>
+                <% } %> 
+              <a href="/gazet" class="gazet"><div data-id2 data-content id="gazet"><span></span> About us</div></a>
+            </div>
+          </div>
+
+          <div class="gazetlar">
+               <div class="list">
+                   <div class="img">
+                       <img src="/pictures/news/gazet.png" alt="">
+                   </div>
+                   <div class="pdf">
+                       <div class="name"><a href="" download>Rysgal gazeti fdsfdsfdsdfsdfd№48 (580)</a></div>
+                       <div class="date">31 августа 2021</div>
+                   </div>
+               </div>
+               <div class="list">
+                   <div class="img">
+                       <img src="/pictures/news/gazet.png" alt="">
+                   </div>
+                   <div class="pdf">
+                       <div class="name"><a href="" download>Rysgal gazeti №48 (580)</a></div>
+                       <div class="date">31 августа 2021</div>
+                   </div>
+               </div>
+               <div class="list">
+                   <div class="img">
+                       <img src="/pictures/news/gazet.png" alt="">
+                   </div>
+                   <div class="pdf">
+                       <div class="name"><a href="" download>Rysgal gazeti №48 (580)</a></div>
+                       <div class="date">31 августа 2021</div>
+                   </div>
+               </div>
+               <div class="list">
+                   <div class="img">
+                       <img src="/pictures/news/gazet.png" alt="">
+                   </div>
+                   <div class="pdf">
+                       <div class="name"><a href="" download>Rysgal gazeti №48 (580)</a></div>
+                       <div class="date">31 августа 2021</div>
+                   </div>
+               </div>
+          </div>
+        </div>
+    </section>
+
+
+    <%- include ('../src/bottom.ejs') %>
+
+    <script>
+         var right1 = document.querySelectorAll(".navbar .right1 a");
+         right1[2].classList.add("active1");
+    </script>
+</body>
+</html>

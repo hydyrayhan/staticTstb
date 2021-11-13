@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
+    <style>
+        .boxHeader{
+            margin-bottom: 20px;
+        }
+        .addHabar .box{
+            width: 100% !important;
+        }
+        .headerCon{
+            width: 50% !important;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include ('../admin.ejs') %>
+    <div class="adminContainer">
+        <div class="main">
+            <div class="pageHeader">
+                <%= name %> 
+            </div>
+        </div>
+    <form action="/admin/banner3" method="POST" id="identifier">
+        <div class="adminTable addHabar">
+            <div class="box imgBox">
+                <div class="boxHeader">Maglumat giriziň</div>
+                <div class="headerCon">
+                    <label class="mazmuny" for="topTa">Ady:</label>
+                    <input type="text" name="headerRU" id="topTa" class="header">
+                </div>                
+                <div class="headerCon" style="display: flex; flex-direction: row;">
+                    <div style="display: flex; flex-direction: column; width: 100%;">
+                        <label class="mazmuny" for="topTa">Salgylanmasy:</label>
+                        <input type="text" name="headerRU" id="topTa" class="header">
+                    </div>
+                    <div class="extraInputs">
+                        <div class="ishjen" style="padding-top: 5px; margin-left: 30px;">
+                            <div class="head" style="margin-bottom: 10px;">Işjeň:</div>
+                            <input type="checkbox" checked name="habarIshjen" id="">
+                        </div>
+                    </div>
+                </div>
+                <div class="boxHeader">Suraty giriziň</div>
+                <div class="mazmun">Suraty giriziň:</div>
+                <div class="inputs" style="width: 50%;">
+                    <p><input type="file"  accept="image/*" name="image" id="img0" onchange="loadFile(event,0)" class="1" style="display: none;"></p>
+                    <label class="imgLbCon" style="height: 140px;" for="img0"><img id="output" height="40px" src="/pictures/icon/banner.svg" /></label>
+                </div>
+            </div>
+            <div class="box">
+
+            </div>
+            <input class="save" type="submit" value="Ýatda sakla">
+        </div>
+    </form>
+    </div>
+
+
+    <script>
+        var img;
+        var loadFile = function(event,el) {
+            var image = document.querySelector('#output');
+            
+            image.src = URL.createObjectURL(event.target.files[0]);
+            image.style.width = "100%";
+            image.style.height = "100%";
+            img = document.querySelectorAll(".inputs p input");
+
+        };
+        
+        async function send(addGalleryImage){
+            var data = new FormData();
+            addGalleryImage = addGalleryImage[0].files[0]
+            data.append(`img`,addGalleryImage);
+
+            const option = {
+                method: "POST",
+                body:data
+            }
+            
+            await fetch("/picture/admin/banner3",option);
+        }
+
+        var submit = document.querySelector(".save");
+
+        submit.addEventListener("click",async function(e){
+            await send(img);
+        })
+
+    </script>
+</body>
+</html>
+
+

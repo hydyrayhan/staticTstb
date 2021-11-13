@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
+</head>
+
+<body>
+    <%- include ('../admin.ejs') %>
+    <div class="adminContainer">
+        <div class="main">
+            <div class="pageHeader">
+                <%= name %>
+            </div>
+            <div style="display: flex;">
+                <div class="addKategori" style="margin-right: 20px;">
+                    Teg goşmak
+                    <img src="/pictures/icon/plus.svg" alt="plus">
+                </div>
+                <div class="addKategori2 addKategori">
+                    Teg pozmak
+                    <img src="/pictures/icon/minus.svg" alt="plus">
+                </div>
+            </div>
+        </div>
+    <form action="/admin/bildirishler" method="POST" id="identifier">
+        <div class="adminTable addHabar">
+                <div class="box">
+                    <div class="boxHeader">Türkmençe giriziň</div>
+                    <div class="headerCon">
+                        <label class="mazmuny" for="">Mazmunyň headeri:</label>
+                        <input type="text" name="headerTM" class="header">
+                    </div>
+                    <div class="mazmun">Mazmuny:</div>
+                    <div class="editorCon">
+                        <div id="editor">
+                            <p></p>
+                        </div>
+                    </div>
+                
+                </div>
+                <div class="box imgBox">
+                    <div class="boxHeader">Suraty giriziň</div>
+                    <div class="mazmun">Suraty giriziň:</div>
+                    <div class="inputs">
+                        <p><input type="file"  accept="image/*" name="image" id="img" onchange="loadFile(event)" style="display: none;"></p>
+                        <label class="imgLbCon" for="img"><img id="output" src="/pictures/icon/addPicture.svg" /></label>
+                    </div>
+                    <div class="headerCon">
+                        <label class="mazmuny" for="ady">Ady:</label>
+                        <input type="text" name="ady" id="ady" class="header">
+                    </div>
+                    <div class="headerCon">
+                        <label class="mazmuny" for="topTa">Täzelikler topary:</label>
+                        <input type="text" name="tazeliklerTopary" id="topTa" class="header">
+                    </div>
+                    <div class="extraInputs" style="justify-content: space-between;">
+                        
+                            <div for="" class="select" style="width: auto; margin-right: 20px;">
+                                <div  style="float: none; min-width: 100%;">
+                                    T/t-ny saýlan:
+                                </div>
+                                <select name="" id="" class="welayatSelect" style="margin-top: 10px; margin-bottom: 0; width: auto; padding:7px 5px 5px">
+                                    <option value="">Ashgabat</option>
+                                    <option value="">Ahal</option>
+                                    <option value="">Balkan</option>
+                                    <option value="">Lebap</option>
+                                    <option value="">Mary</option>
+                                    <option value="">Daşoguz</option>
+                                </select>
+                            </div>
+                            
+                        <div class="date">
+                            <div class="name">M.girizilen senesi:</div>
+                            <input type="date" name="date">
+                        </div>
+                        <div class="ishjen">
+                            <div class="head">Işjeň:</div>
+                            <input type="checkbox" checked name="habarIshjen" id="">
+                        </div>
+                    </div>
+                
+
+                <textarea name="text" style="display: none;" id="hiddenArea" cols="30"  rows="10"></textarea>
+                <textarea name="text2" id="hiddenArea2" style="display: none;" cols="30"  rows="10"></textarea>
+                <textarea name="text3" id="hiddenArea3" cols="30" style="display: none;" rows="10"></textarea>
+            </div>
+            <div class="box">
+                <div class="boxHeader">Rusça giriziň</div>
+                <div class="headerCon">
+                    <label class="mazmuny" for="topTa">Mazmunyň headeri:</label>
+                    <input type="text" name="headerRU" id="topTa" class="header">
+                </div>
+                <div class="mazmun">Mazmuny:</div>
+                <div class="editorCon">
+                    <div id="editor2">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="boxHeader">Iňlisçe giriziň</div>
+                <div class="headerCon">
+                    <label class="mazmuny" for="topTa">Mazmunyň headeri:</label>
+                    <input type="text" name="headerEN" id="topTa" class="header">
+                </div>
+                <div class="mazmun">Mazmuny:</div>
+                <div class="editorCon">
+                    <div id="editor3">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <input class="save" type="submit" value="Ýatda sakla">
+    </form>
+    </div>
+
+    
+    <div class="bg" style="display: none;"></div>
+    <div class="kategoriPopup" style="display: none;">
+        <div class="head">Täze giriziljek tegiň adyny giriziň </div>
+        <form action="/internetKategori" method="POST" class="kategori">
+            <label for="tm">Turkmençe</label>
+            <input autocomplete="off" type="text" name="tm" id="tm">
+            <label for="ru">Rusça</label>
+            <input autocomplete="off" type="text" id="ru" name="ru">
+            <label for="en">Iňlisçe</label>
+            <input autocomplete="off" type="text" id="en" name="en">
+            <input type="submit" value="Ýatda sakla">
+        </form>
+    </div>
+
+    <div class="bg2 bg" style="display: none;"></div>
+    <div class="kategoriPopup2 kategoriPopup" style="display: none;">
+        <div class="head">Teg pozmak</div>
+        <div class="element">Sport<img src="/pictures/icon/minus.svg" alt=""></div>
+        <div class="element">Sport we shm<img src="/pictures/icon/minus.svg" alt=""></div>
+        <div class="element">Sportlar<img src="/pictures/icon/minus.svg" alt=""></div>
+    </div>
+
+
+    <script>
+        dropActive(0,2);
+    </script>
+
+    <!-- picture show when i choose from file and send to node with fetch-->
+    <script>
+        var img;
+        var loadFile = function(event,el) {
+            var image = document.querySelector('#output');
+            
+            image.src = URL.createObjectURL(event.target.files[0]);
+            image.style.width = "100%";
+            image.style.height = "100%";
+            img = document.querySelectorAll(".inputs p input");
+
+        };
+        
+        async function send(addGalleryImage){
+            var data = new FormData();
+            addGalleryImage = addGalleryImage[0].files[0]
+            data.append(`img`,addGalleryImage);
+
+            const option = {
+                method: "POST",
+                body:data
+            }
+            
+            await fetch("/picture/admin/bildirishler",option);
+        }
+
+        var submit = document.querySelector(".save");
+
+        submit.addEventListener("click",async function(e){
+            await send(img);
+        })
+
+    </script>
+
+<script>
+    popup();
+    popup2();
+</script>
+
+
+    <script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
+ 
+    <!-- Initialize Quill editor -->
+    <script>
+        
+      var editor = new Quill('#editor', {
+        modules: { },
+        theme: 'snow'
+      });
+      var editor = new Quill('#editor2', {
+        modules: { },
+        theme: 'snow'
+      });
+      var editor = new Quill('#editor3', {
+        modules: { },
+        theme: 'snow'
+      });
+
+    //   3 sany textarea girizilen maglumatlary hidden textarea girizyar
+    var idForm = document.querySelector("#identifier");
+    var hiddenText = document.querySelector("#hiddenArea");
+    var hiddenText2 = document.querySelector("#hiddenArea2");
+    var hiddenText3 = document.querySelector("#hiddenArea3");
+
+    idForm.addEventListener("submit",function(){
+        var text = document.querySelector("#editor .ql-editor");
+        var text2 = document.querySelector("#editor2 .ql-editor");
+        var text3 = document.querySelector("#editor3 .ql-editor");
+        hiddenText.value = text.innerHTML;
+        hiddenText2.value = text2.innerHTML;
+        hiddenText3.value = text3.innerHTML;
+    })
+    </script> 
+
+</body>
+</html>
+
+

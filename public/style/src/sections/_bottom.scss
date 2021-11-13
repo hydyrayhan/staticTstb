@@ -1,0 +1,169 @@
+@import "../color";
+
+.bottomContainer{
+    position: relative;
+    transition: 1s;
+}
+
+.bottomSection{
+    width: 100%;
+    background: $notWhite;
+    padding: 80px 0;
+    transition: 1s;
+    margin-bottom: 0;
+    @include mobile{
+        padding: 25px 0;
+    }
+
+    .lastThreeLine{
+        text-align: right;
+        color: $gray;
+        font-weight: 600;
+        margin-top: 30px;
+        display: none;
+        @include mobile{
+            display: block;
+        }
+    }
+    
+     .bottomGrid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:    
+        "phones adress email about";
+        font-size: 18px;
+        font-weight: 600;
+        color: $notBlack;
+        @include mobile{
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "phones"
+            "adress"
+            "email"
+            "about";
+        }
+        .phones{
+            grid-area: phones;
+        }
+        .adress{
+            padding-left: 50px;
+            grid-area: adress;
+            @include mobile{
+                padding-left: 0px;
+                width: 80%;
+            }
+        }
+        .email{
+            padding-left: 100px;
+            grid-area: email;
+            @include mobile{
+                padding-left: 0px;
+            }
+        }
+        .about{
+            text-align: right;
+            @include mobile{
+                text-align: left;
+            }
+            grid-area: about;
+        }
+        .title{
+            color: gray;
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom:20px;
+            @include mobile{
+                margin-bottom: 10px;
+                margin-top: 30px;
+            }
+        }
+    }
+}
+.bottomInformation{
+    width: 100%;
+    background: $blue;
+    color: white;
+    // height: 200px;
+    padding: 40px 30px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+
+    @include mobile{
+        padding:40px 30px;
+    }
+
+    // position: absolute;
+    // top: 0;
+
+
+    transition: 1s;
+    .container{
+        display: flex;
+        align-items: center;
+        @include mobile{
+            flex-direction: column;
+        }
+    }
+    .bottomCon{
+        display: flex;  
+        justify-content: space-between;
+    }
+    .titleCon{
+        .big{
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .title{
+            margin-bottom: 20px;
+        }
+        @include mobile{
+            width: 100%;
+        }
+    }
+    .inputCon{
+        width: 60%;
+        padding-left:10px;
+        display: flex;
+        justify-content: flex-end;
+        @include mobile{
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            box-sizing: border-box;
+            padding-left: 0;
+        }
+        input[type=email]{
+            background: none;
+            outline: none;
+            border: 1px solid white;
+            padding: 14px 20px;
+            width: 50%;
+            margin-right: 8%;
+            color: white;
+            font-size: 18px;
+            @include mobile{
+                width: 100%;
+                margin-right: 0;
+                box-sizing: border-box;
+                margin-bottom: 20px;
+            }
+        }
+        input::placeholder{
+            color: white;
+            font-size: 18px;
+        }
+        input[type=submit]{
+            border:none;
+            outline: none;
+            color: $notBlack;
+            font-size: 18px;
+            padding: 14px 20px;
+            @include mobile{
+                width: 100%;
+            }
+        }
+    }
+}
+

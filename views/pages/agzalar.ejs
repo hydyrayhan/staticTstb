@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include ('../src/header.ejs') %>
+
+    <section class="agzalar">
+        <div class="container">
+            <div class="agzalarHeader">SPPT agzalary</div>
+            <div class="agzalarWelayatlar">
+                <div class="welayat active" id="0">Ashgabat</div>
+                <div class="welayat" id="1">Ahal</div>
+                <div class="welayat" id="2">Dashoguz</div>
+                <div class="welayat" id="3">Balkan</div>
+                <div class="welayat" id="4">Lebap</div>
+                <div class="welayat" id="5">Mary</div>
+            </div>
+            <div class="selection">
+                <div class="agzaDefinition">Выберите категорию, чтобы увидеть список ниже:</div>
+                <select name="" id="">
+                    <option value="">Select1</option>
+                    <option value="">Select2</option>
+                    <option value="">Select3</option>
+                    <option value="">Select4</option>
+                    <option value="">Select5</option>
+                </select>
+            </div>
+            <% for( let k = 0; k < data.length; k++ ) { %>
+                <div class="listContainer">
+                    <% for( let i = 0; i < data[k].length; i++ ) { %>
+                        <div class="agzalarList">
+                            <div class="main">
+                                <div class="logo"><img src="<%= data[k][i].pic %>" alt="dsds"></div>
+                                <div class="text">
+                                    <div class="listHead" data-dynamic data-tm="<%- data[k][i].name.TM %>" data-ru="<%- data[k][i].name.RU %>" data-en="<%- data[k][i].name.EN %>"><%= data[k][i].name.RU %> </div>
+                                    <div class="listText textDots" data-dynamic data-tm="<%- data[k][i].definition.TM %>" data-ru="<%- data[k][i].definition.RU %>" data-en="<%- data[k][i].definition.EN %>"><%= data[k][i].definition.RU %> </div>
+                                </div>
+                                <div class="icon"><img src="/pictures/icon/grayRightArrow.svg" alt=""></div>
+                            </div>
+                            <div class="full">
+                                <div class="adress">Address:</div>
+                                <div class="adressInfo" data-dynamic data-tm="<%- data[k][i].address.TM %>" data-ru="<%- data[k][i].address.ru %>" data-en="<%- data[k][i].address.EN %>"><%= data[k][i].address.RU %></div>
+        
+                                <div class="adress">Link: </div>
+                                <div class="right">
+                                    <div class="adresses">
+                                        <div class="webLink">web sayt: </div>
+                                        <div class="email">Email: </div>
+                                        <div class="instagram">Instagram: </div>
+                                    </div>
+            
+                                    <div class="links">
+                                        <a href="<%= data[k][i].website %>" class="text"><%= data[k][i].website %> </a>
+                                        <a href="" class="text"><%= data[k][i].email %> </a>
+                                        <a href="" class="text"><%=data[k][i].instagram%></a>
+                                    </div>
+                                </div>
+        
+                                <div class="adress">Flayllar download etmek uchin</div>
+                                <div class="filesCon">
+                                    <% for( let j = 0; j < data[k][i].files.length; j++ ) { %>
+                                        <div class="file">
+                                            <div class="icon"><img src="/pictures/icon/file.svg" alt=""></div>
+                                            <div class="fileRight">
+                                                <div class="name"><a href="<%= data[k][i].files[j].link %>" download><%= data[k][i].files[j].name %> </a></div>
+                                                <div class="kb"><%= data[k][i].files[j].size %> </div>
+                                            </div>
+                                        </div>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+            <% } %>      
+        </div>
+    </section>
+
+    <%- include ('../src/bottom.ejs') %>
+
+    <!-- 7 sany page e active goshyar -->
+    <script>
+        active(1);
+    </script>
+
+
+    <!-- Which welayat -->
+    <script>
+        const welayat = document.querySelectorAll(".welayat");
+        const listCon = document.querySelectorAll(".listContainer");
+        var id  = Number('<%=place%>');
+        if(id<0){
+            show(welayat[0])
+        }else{
+            show(welayat[id])
+        }
+        for(var i = 0; i<welayat.length; i++){
+            welayat[i].addEventListener("click",function(){
+                show(this);
+            })
+        }
+
+        function show(e){
+            for(var j = 0; j<welayat.length; j++){
+                welayat[j].classList.remove("active");
+                listCon[j].style.display = "none";
+            }
+            e.classList.add("active");
+            listCon[Number(e.id)].style.display = "block";
+        }
+        
+    </script>
+
+    <!-- list achyan -->
+    <script>
+        const list = document.querySelectorAll(".agzalarList .main");
+        var id  = Number('<%=place%>');
+        
+        var bul = false;
+        if(id>=0){
+            open(list[id]);
+        }else{
+            bul = true;
+        }
+
+
+        for(var i = 0; i<list.length; i++){
+            list[i].addEventListener("click",function(){
+                if(this.style.backgroundColor == "white" || bul){
+                    for(var j = 0; j<list.length; j++){
+                        clothes(list[j])
+                    }
+                    open(this);
+                }else{
+                    clothes(this);
+                    bul = true;
+                }
+            })
+        }
+
+
+        function clothes(e){
+            e.childNodes[3].childNodes[3].classList.add("textDots")
+            e.nextSibling.nextSibling.style.display = "none";
+            e.parentNode.style.border = "none";
+            e.style.backgroundColor = "white";
+            var child = e.childNodes[5].childNodes[0];
+            child.setAttribute("src","/pictures/icon/grayRightArrow.svg");
+            e.childNodes[5].style.minWidth = "12px";
+        }
+        function open(e){
+            e.childNodes[3].childNodes[3].classList.remove("textDots")
+            e.nextSibling.nextSibling.style.display = "block"
+            e.style.backgroundColor = "#F3F3F2";
+            e.parentNode.style.border = "1px solid #2058D4"
+            var child = e.childNodes[5].childNodes[0];
+            child.setAttribute("src","/pictures/icon/downBlue.svg");
+            e.childNodes[5].style.minWidth = "20px";
+            bul = false;
+        }
+    </script>
+
+</body>
+</html>

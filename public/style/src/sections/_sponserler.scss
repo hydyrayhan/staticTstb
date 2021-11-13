@@ -1,0 +1,115 @@
+@import "../color";
+
+.sponserSection{
+    position: relative;
+    z-index: 10000;
+    transition: 1s;
+}
+.container{
+    .sponserHeader{
+        margin-top: 100px;
+        @include center(space-between);
+        .sponserTitle{
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 50px;
+            @include tablet{
+                margin-bottom: 0;
+            }
+        }
+        .arrows{
+            @include center(space-between);
+            width: 100px;
+            @include mobile{
+                display: none;
+            }
+        }
+    }
+    .sponserler{
+        .splide4{
+            @include mobile{
+                display: none;
+            }
+        }
+        .sponsers{
+            display: none;
+            @include mobile{
+                display: block;
+            }
+        }
+        margin-bottom: 100px;
+        @include mobile{
+            margin-bottom: 25px;
+        }
+        width: 100%;
+        padding: 10px;
+        .sponser{
+            margin: 10px 10px 10px 10px;
+            box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.04);
+            padding: 15px;
+            border-radius: 5px;
+            @include center(space-between); 
+            .left{
+                @include center();
+                .sponserLogo{
+                    max-width: 70px;
+                    max-height: 70px;
+                    min-width: 70px;
+                    min-height: 70px;
+                    margin-right: 20px;
+                    @include center();
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .icon{
+                height: 70px;
+                min-width: 15px ;
+                cursor: pointer;
+                @include mobile{
+                    min-width: 10px;
+                    max-width: 10px;
+                }
+            }
+        }
+    }
+    .statictika{
+        margin-bottom: 100px;
+        padding: 0 100px;
+        @include mobile{
+            padding: 0;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: center;
+        }
+        @include center();
+        flex-wrap: wrap; 
+        .card{
+            margin-top: 20px;
+            max-width: 200px;
+            @include center();
+            flex-direction: column;
+            text-align: center;
+            .ball{
+                background: rgba(13, 140, 247, 0.8);
+                width: 150px;
+                height: 150px;
+                @include center();
+                font-size: 22px;
+                font-weight: 700;
+                color: white;
+                line-height: 35px;
+                border-radius: 50%;
+                padding: 15px;
+                box-sizing: border-box;
+                margin-bottom: 18px;
+            }
+            .name{
+                font-weight: 600;
+                line-height: 22px;
+                color: $black;
+            }
+        }
+    }
+} 
